@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta content="charset=UTF-8"/>
-<title>The Banquet Scene</title>
+<title>The Banquet Scene - Interactive 3D View</title>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
 <!--SPIDERGL-->
@@ -129,7 +129,7 @@ function setup3dhop() {
 				startDistance: 1.5,
 				minMaxPhi: [-85, 85],
 				minMaxTheta: [-70.0, 70.0],
-				minMaxDist: [0.2, 2.0]
+				minMaxDist: [0.5, 2.0]
 			}
 		}
 	});
@@ -186,7 +186,7 @@ function actionsToolbar(action) {
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$('#measure-output').html(measure.toFixed(2) + "mm");
+	$('#measure-output').html(measure.toFixed(2) + "cm");
 }
 //--MEASURE--
 
