@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta content="charset=UTF-8"/>
-<title>3DHOP - 3D Heritage Online Presenter</title>
+<title>The Banquet Scene</title>
 <!--STYLESHEET-->
 <link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
 <!--SPIDERGL-->
@@ -113,10 +113,10 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/gargo.nxz" }
+			"mesh_1" : { url: "models/SfM_DS04_DecimatedModel_2M.nxz" }
 		},
 		modelInstances : {
-			"model_1" : { 
+			"model_1" : {
 				mesh  : "mesh_1",
 				color : [0.8, 0.7, 0.75]
 			}
@@ -186,19 +186,19 @@ function actionsToolbar(action) {
 function onEndMeasure(measure) {
 	// measure.toFixed(2) sets the number of decimals when displaying the measure
 	// depending on the model measure units, use "mm","m","km" or whatever you have
-	$('#measure-output').html(measure.toFixed(2) + "mm"); 
+	$('#measure-output').html(measure.toFixed(2) + "mm");
 }
 //--MEASURE--
 
 //--PICKPOINT--
 function onEndPick(point) {
-	// .toFixed(2) sets the number of decimals when displaying the picked point	
+	// .toFixed(2) sets the number of decimals when displaying the picked point
 	var x = point[0].toFixed(2);
 	var y = point[1].toFixed(2);
 	var z = point[2].toFixed(2);
     $('#pickpoint-output').html("[ "+x+" , "+y+" , "+z+" ]");
-} 
-//--PICKPOINT--	
+}
+//--PICKPOINT--
 
 $(document).ready(function(){
 	init3dhop();
