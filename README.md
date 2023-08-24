@@ -16,6 +16,8 @@ This is a joint project facilitated by the Freie Universität Berlin and the Uni
 
 ### Project Lead:
 Prof. Dr. Dominik Bonatz, Institute of Near Eastern Archaeology, Freie Universität Berlin, Germany
+- https://www.geschkult.fu-berlin.de/e/vaa/vaa/mitarbeiter/Professorinnen_und_Professoren/bonatz.html
+
 ### 3D Visualisation & Web Viewer:
 Dr. Sebastian Hageneuer, Chair of Digital and Computational Archaeology, Institute of Archaeology, University of Cologne, Germany
 - https://github.com/sebastian81
