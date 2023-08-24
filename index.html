@@ -38,6 +38,10 @@
   <img id="light_on"    title="Disable Light Control"  src="skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="light"       title="Enable Light Control"   src="skins/dark/lightcontrol.png"/><br/>
 <!--LIGHT-->
+<!--HOTSPOTS-->
+  <img id="hotspot_on"  title="Hide Hotspots"           src="skins/dark/pin_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="hotspot"     title="Show Hotspots"           src="skins/dark/pin.png"/><br/>
+<!--HOTSPOTS-->
 <!--MEASURE-->
   <img id="measure_on"  title="Disable Measure Tool"   src="skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="measure"     title="Enable Measure Tool"    src="skins/dark/measure.png"/><br/>
@@ -115,7 +119,8 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M.nxz" }
+			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M.nxz" },
+      "KingsFace": { url: "models/KingsFace.ply" }
 		},
 		modelInstances : {
 			"model_1" : {
@@ -123,6 +128,17 @@ function setup3dhop() {
 				color : [0.8, 0.7, 0.75]
 			}
 		},
+    spots: {
+      "KingsFace": {
+        mesh : "KingsFace",
+        transform : {
+          matrix: SglMat4.mul(SglMat4.translation([ 3.3, 110.0, -7.0]),
+                    SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
+        },
+        color: [0.0, 0.25, 1.0],
+        alpha: 0.5
+      }
+    },
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
@@ -144,6 +160,10 @@ function setup3dhop() {
 	presenter._onEndPickingPoint = onEndPick;
 //--POINT PICKING--
 
+//--HOTSPOTS--
+  presenter.setSpotVisibility(HOP_ALL, false, true);
+//--HOTSPOTS--
+
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
@@ -164,6 +184,9 @@ function actionsToolbar(action) {
 //--LIGHT--
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
+//--HOTSPOTS--
+  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+//--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
