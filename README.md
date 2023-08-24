@@ -8,8 +8,7 @@ This project runs in a normal web-browser and can be accessed via GitHub pages: 
 
 ## Usage
 
-The interactive 3D view utilized the 3DHOP framework made by cnr-isti-vclab: https://github.com/cnr-isti-vclab/3DHOP
-You can rotate the object by clicking and holding the left mouse button. You can pan the object by clicking and holding the middle or right mouse button.
+You can rotate the object by clicking and holding the left mouse button. You can pan the object by clicking and holding the middle or right mouse button. You can zoom in or out by using the mouse wheel or the magnifying glass buttons in the toolbar.
 
 ## Contributing
 
@@ -17,7 +16,7 @@ This is a joint project facilitated by the Freie Universität Berlin and the Uni
 
 ### Project Lead:
 Prof. Dr. Dominik Bonatz, Institute of Near Eastern Archaeology, Freie Universität Berlin, Germany
-### 3D data (scanning and presentation):
+### 3D Visualisation & Web Viewer:
 Dr. Sebastian Hageneuer, Chair of Digital and Computational Archaeology, Institute of Archaeology, University of Cologne, Germany
 - https://github.com/sebastian81
 
