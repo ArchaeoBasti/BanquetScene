@@ -13,8 +13,13 @@ You can rotate the object by clicking and holding the left mouse button. You can
 
 ## Contributing
 
-This project is based on the 3DHOP framework: https://github.com/cnr-isti-vclab/3DHOP
-The scanning of the object and the creation of the 3D object as well as the implementation into the interactive 3D view was made by Sebastian Hageneuer: https://github.com/sebastian81
+This is a joint project facilitated by the Freie Universität Berlin and the University of Cologne with the support by the Trustees of the British Museum in London. The 3D framework is based on 3DHOP (https://github.com/cnr-isti-vclab/3DHOP) developed by the Visual Computing Lab of ISTI, part of the CNR.
+
+### Project Lead:
+Prof. Dr. Dominik Bonatz, Institute of Near Eastern Archaeology, Freie Universität Berlin, Germany
+### 3D data (scanning and presentation):
+Dr. Sebastian Hageneuer, Chair of Digital and Computational Archaeology, Institute of Archaeology, University of Cologne, Germany
+- https://github.com/sebastian81
 
 ## License
 
