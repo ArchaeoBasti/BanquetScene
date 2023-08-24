@@ -54,7 +54,7 @@
   <img id="color_on"    title="Disable Solid Color"    src="skins/dark/color_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="color"       title="Enable Solid Color"     src="skins/dark/color.png"/><br/>
 <!--COLOR-->
-<!--CAMERA-->
+<!--CAMERA
   <img id="perspective"  title="Perspective Camera"    src="skins/dark/perspective.png" style="position:absolute; visibility:hidden;"/>
   <img id="orthographic" title="Orthographic Camera"   src="skins/dark/orthographic.png"/><br/>
 <!--CAMERA-->
@@ -163,7 +163,7 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--CAMERA--
-	else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
+//	else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
 //--COLOR--
 	else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
