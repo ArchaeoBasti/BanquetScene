@@ -1,6 +1,6 @@
 # BanquetScene
 
-This is an interactive 3D view of Assurbanipal's Banquet Scene based on a Structure-from-Motion scan made 3rd of February 2023 at the British Museum. Further description will follow when the project is done.
+This project is a cooperation between the Institute of Near Eastern Archaeology of the Free University of Berlin and the Archaeological Institute of the University of Cologne. It was supported by the Trustees of the British Museum, who kindly granted us access to the object presented here. The scans of the object were carried out in February 2023 and the website was created at the end of 2023.
 
 ## Installation
 
