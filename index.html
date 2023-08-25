@@ -125,6 +125,12 @@
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
+  <div class="text-box-wrapper">
+    <div class="text-box Teumman">
+      <b>Teumman</b><br>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+  </div>
 <!--TEXTBOX-->
 
  <canvas id="draw-canvas" style="background: radial-gradient(circle, rgba(55,51,108,1) 0%, rgba(88,88,124,1) 32%, rgba(101,144,153,1) 100%);"/>
@@ -140,7 +146,8 @@ function setup3dhop() {
 	presenter.setScene({
 		meshes: {
 			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
-      "Flora": { url: "models/Hotspot_LittleTree.ply" }
+      "Flora": { url: "models/Hotspot_LittleTree.ply" },
+      "Teumman": { url: "models/Hotspot_Teumman.ply" }
 		},
 		modelInstances : {
 			"model_BanquetScene" : {
@@ -152,6 +159,11 @@ function setup3dhop() {
       "Flora": {
         mesh : "Flora",
         color: [0.0, 0.58, 0.35],
+        alpha: 0.5
+      },
+      "Teumman": {
+        mesh : "Teumman",
+        color: [1.0, 0.2, 0.2],
         alpha: 0.5
       }
     },
@@ -187,7 +199,7 @@ function setup3dhop() {
 
 //--TEXTBOXES--
   function hideAllHotspotTextboxes() {
-    const collection = document.getElementsByClassName('text-box Flora');
+    const collection = document.getElementsByClassName('text-box');
     for (let i = 0; i < collection.length; i++) {
         collection[i].style.visibility = "hidden";
     }
@@ -211,8 +223,7 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--HOTSPOTS--
-  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
-  else if(action=='hotspot_on') { hideAllHotspotTextboxes(); }
+  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
@@ -267,6 +278,7 @@ function toggleTextboxVisibility(textbox_class) {
 function onPickedSpot(id) {
   switch(id) {
      case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
+     case 'Teumman' : toggleTextboxVisibility('text-box Teumman'); break;
   }
 }
 //--PICK HOTSPOT--
