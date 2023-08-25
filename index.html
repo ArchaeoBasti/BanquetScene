@@ -23,6 +23,8 @@
 <script type="text/javascript" src="js/trackball_sphere.js"></script>
 <!--UTILITY-->
 <script type="text/javascript" src="js/init.js"></script>
+<!--PROJECT SPECIFIC-->
+<script type="text/javascript" src="js/BanquetScene.js"></script>
 </head>
 <body>
 
@@ -202,13 +204,6 @@ function setup3dhop() {
 //--TEXTBOXES--
 }
 
-function hideAllHotspotTextboxes() {
-  const collection = document.getElementsByClassName('text-box');
-  for (let i = 0; i < collection.length; i++) {
-      collection[i].style.visibility = "hidden";
-  }
-}
-
 function actionsToolbar(action) {
 	if(action=='home') presenter.resetTrackball();
 //--FULLSCREEN--
@@ -266,17 +261,6 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
-function toggleTextboxVisibility(textbox_class) {
-  const collection = document.getElementsByClassName(textbox_class);
-  for (let i = 0; i < collection.length; i++) {
-    if (window.getComputedStyle(collection[i]).visibility === "hidden") {
-      collection[i].style.visibility = "visible";
-    } else {
-      collection[i].style.visibility = "hidden";
-    }
-  }
-}
-
 function onPickedSpot(id) {
   switch(id) {
      case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
