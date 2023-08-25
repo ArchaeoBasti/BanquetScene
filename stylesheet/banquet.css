@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   font-family: Arial, sans-serif;
   font-size: calc(9px + .5vw);
   color: #FFFFFF;
-
+visibility: hidden;
 }
 
-.Flora { visibility: hidden; }
+.Flora {  }

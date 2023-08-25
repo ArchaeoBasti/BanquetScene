@@ -64,8 +64,10 @@
   <img id="sections"    title="Enable Plane Sections"  src="skins/dark/sections.png"/><br/>
 <!--SECTIONS-->
 <!--COLOR-->
+<!--
   <img id="color_on"    title="Disable Solid Color"    src="skins/dark/color_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="color"       title="Enable Solid Color"     src="skins/dark/color.png"/><br/>
+-->
 <!--COLOR-->
 <!--CAMERA-->
 <!--
@@ -205,6 +207,7 @@ function actionsToolbar(action) {
 //--LIGHT--
 //--HOTSPOTS--
   else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+  else if(action=='hotspot_on') { hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
@@ -245,6 +248,10 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
+function hideAllHotspotTextboxes() {
+
+}
+
 function toggleTextboxVisibility(textbox_class) {
   const collection = document.getElementsByClassName(textbox_class);
   for (let i = 0; i < collection.length; i++) {
@@ -258,7 +265,7 @@ function toggleTextboxVisibility(textbox_class) {
 
 function onPickedSpot(id) {
   switch(id) {
-     case 'Flora' : toggleTextboxVisibility('Flora'); break;
+     case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
   }
 }
 //--PICK HOTSPOT--
