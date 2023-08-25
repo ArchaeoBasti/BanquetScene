@@ -166,6 +166,7 @@ function setup3dhop() {
 
 //--HOTSPOTS--
   presenter.setSpotVisibility(HOP_ALL, false, true);
+  presenter._onPickedSpot = onPickedSpot;
 //--HOTSPOTS--
 
 //--SECTIONS--
@@ -228,6 +229,14 @@ function onEndPick(point) {
     $('#pickpoint-output').html("[ "+x+" , "+y+" , "+z+" ]");
 }
 //--PICKPOINT--
+
+//--PICK HOTSPOT--
+function onPickedSpot(id) {
+  switch(id) {
+     case 'LittleTree' : alert("Little Tree Clicked"); break;
+  }
+}
+//--PICK HOTSPOT--
 
 $(document).ready(function(){
 	init3dhop();
