@@ -37,9 +37,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #imprint {
   width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+  width: 80%;
+  position: absolute; top: 20px;
 
   background: rgba(0, 0, 0, 0.25);
   border-radius: 15px;
