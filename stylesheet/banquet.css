@@ -36,10 +36,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 #toolbar_imprint { position:absolute; right:10px; top:10px; -webkit-user-select:none; -webkit-touch-callout:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; touch-action:none; -ms-touch-action:none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; }
+#toolbar_imprint img { margin-bottom:8px; width:50px; height:50px; opacity:0.5; cursor:pointer; -webkit-user-select:none; -webkit-touch-callout:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; touch-action:none; -ms-touch-action:none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; }
 
 #imprint {
   width: 40%;
-  position: absolute; top: 20px; right: 100px;
+  position: absolute; top: 10px; right: 90px;
 
   background: rgba(0, 0, 0, 0.25);
   border-radius: 15px;
