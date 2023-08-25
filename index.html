@@ -58,8 +58,10 @@
   <img id="measure"     title="Enable Measure Tool"    src="skins/dark/measure.png"/><br/>
 <!--MEASURE-->
 <!--POINT PICKING-->
+<!--
   <img id="pick_on"     title="Disable PickPoint Mode" src="skins/dark/pick_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="pick"        title="Enable PickPoint Mode"  src="skins/dark/pick.png"/><br/>
+-->
 <!--POINT PICKING-->
 <!--SECTIONS-->
   <img id="sections_on" title="Disable Plane Sections" src="skins/dark/sections_on.png" style="position:absolute; visibility:hidden;"/>
@@ -91,7 +93,9 @@
 <!--MEASURE-->
 
 <!--POINT PICKING-->
+<!--
  <div id="pickpoint-box" class="output-box">XYZ picked point<hr/><span id="pickpoint-output" class="output-text" onmousedown="event.stopPropagation()">[ 0 , 0 , 0 ]</span></div>
+-->
 <!--POINT PICKING-->
 
 <!--SECTIONS-->
@@ -123,13 +127,13 @@
 <!--TEXTBOX-->
   <div class="text-box-wrapper">
     <div class="text-box Flora">
-      <b>Flora!!</b><br>
+      <b>Neuassyrische Flora</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
   <div class="text-box-wrapper">
     <div class="text-box Teumman">
-      <b>Teumman</b><br>
+      <b>Der Kopf des Teumman</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
@@ -187,7 +191,7 @@ function setup3dhop() {
 //--MEASURE--
 
 //--POINT PICKING--
-	presenter._onEndPickingPoint = onEndPick;
+	//--presenter._onEndPickingPoint = onEndPick;
 //--POINT PICKING--
 
 //--HOTSPOTS--
@@ -198,10 +202,6 @@ function setup3dhop() {
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
-
-//--TEXTBOXES--
-
-//--TEXTBOXES--
 }
 
 function actionsToolbar(action) {
@@ -226,13 +226,13 @@ function actionsToolbar(action) {
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
 //--COLOR--
-	else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
+	//--else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
 //--COLOR--
 //--MEASURE--
 	else if(action=='measure' || action=='measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
 //--MEASURE--
 //--POINT PICKING--
-	else if(action=='pick' || action=='pick_on') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
+	//--else if(action=='pick' || action=='pick_on') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
 //--POINT PICKING--
 //--SCREENSHOT--
 	else if(action=='screenshot') presenter.saveScreenshot();
@@ -251,6 +251,7 @@ function onEndMeasure(measure) {
 //--MEASURE--
 
 //--PICKPOINT--
+/*
 function onEndPick(point) {
 	// .toFixed(2) sets the number of decimals when displaying the picked point
 	var x = point[0].toFixed(2);
@@ -258,6 +259,7 @@ function onEndPick(point) {
 	var z = point[2].toFixed(2);
     $('#pickpoint-output').html("[ "+x+" , "+y+" , "+z+" ]");
 }
+*/
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
