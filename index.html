@@ -117,8 +117,9 @@
 <!--SECTIONS-->
 
 <!--TEXTBOX-->
-  <div id="text-box-wrapper">
-    <div id="text-box">
+  <div class="text-box-wrapper">
+    <div class="text-box Flora">
+      <b>Fauna</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
@@ -137,7 +138,7 @@ function setup3dhop() {
 	presenter.setScene({
 		meshes: {
 			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
-      "LittleTree": { url: "models/Hotspot_LittleTree.ply" }
+      "Flora": { url: "models/Hotspot_LittleTree.ply" }
 		},
 		modelInstances : {
 			"model_BanquetScene" : {
@@ -146,8 +147,8 @@ function setup3dhop() {
 			}
 		},
     spots: {
-      "LittleTree": {
-        mesh : "LittleTree",
+      "Flora": {
+        mesh : "Flora",
         color: [0.0, 0.58, 0.35],
         alpha: 0.5
       }
@@ -181,6 +182,10 @@ function setup3dhop() {
 //--SECTIONS--
 	sectiontoolInit();
 //--SECTIONS--
+
+//--TEXTBOXES--
+
+//--TEXTBOXES--
 }
 
 function actionsToolbar(action) {
@@ -242,7 +247,7 @@ function onEndPick(point) {
 //--PICK HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
-     case 'LittleTree' : alert("Little Tree Clicked"); break;
+     case 'Flora' : document.getElementById("Flora").style.display = "block"; break;
   }
 }
 //--PICK HOTSPOT--
