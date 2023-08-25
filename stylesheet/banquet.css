@@ -34,11 +34,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   color: #FFFFFF;
   visibility: hidden;
 }
-
-#text-left {
-  width: 90%;
-}
-#image-right {
-  width: 10%;
-}
-#text-image
