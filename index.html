@@ -186,7 +186,12 @@ function setup3dhop() {
 //--SECTIONS--
 
 //--TEXTBOXES--
-
+  function hideAllHotspotTextboxes() {
+    const collection = document.getElementsByClassName('text-box');
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].style.visibility = "hidden";
+    }
+  }
 //--TEXTBOXES--
 }
 
@@ -248,13 +253,6 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
-function hideAllHotspotTextboxes() {
-  const collection = document.getElementsByClassName('text-box');
-  for (let i = 0; i < collection.length; i++) {
-      collection[i].style.visibility = "hidden";
-  }
-}
-
 function toggleTextboxVisibility(textbox_class) {
   const collection = document.getElementsByClassName(textbox_class);
   for (let i = 0; i < collection.length; i++) {
