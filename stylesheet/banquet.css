@@ -45,6 +45,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   border-radius: 15px;
   padding: 20px;
   font-family: Arial, sans-serif;
-  font-size: calc(9px + .5vw);
+  font-size: calc(7px + .5vw);
   color: #FFFFFF;
 }
