@@ -24,7 +24,6 @@
 <script type="text/javascript" src="js/init.js"></script>
 </head>
 <body>
-<audio src="sounds/birds-in-the-morning-24147.mp3" style="display:none;" autoplay>
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
  <div id="toolbar">
   <img id="home"        title="Home"                   src="skins/dark/home.png"/><br/>
@@ -74,6 +73,10 @@
   <img id="full"        title="Full Screen"            src="skins/dark/full.png"/>
 <!--FULLSCREEN-->
  </div>
+
+ <audio control autoplay muted>
+   <source src="sounds/birds-in-the-morning-24147.mp3" type="audio/mpeg">
+ </audio>
 
 <!--MEASURE-->
  <div id="measure-box" class="output-box">Measured length<hr/><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span></div>
