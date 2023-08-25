@@ -19,9 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #text-box {
   width: 80%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   color: #FFFFFF;
   font-family: Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   position: absolute; bottom: 20px;
+  display: inline-block;
+  margin: 0 auto;
 }
