@@ -127,13 +127,19 @@
 <!--TEXTBOX-->
   <div class="text-box-wrapper">
     <div class="text-box Flora">
-      <b>Neuassyrische Flora</b><br>
+      <b>Neo-Assyrian Flora</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
   <div class="text-box-wrapper">
     <div class="text-box Teumman">
-      <b>Der Kopf des Teumman</b><br>
+      <b>The head of Teumman</b><br>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+  </div>
+  <div class="text-box-wrapper">
+    <div class="text-box Fauna">
+      <b>Neo-Assyrian Fauna</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </div>
   </div>
@@ -153,7 +159,8 @@ function setup3dhop() {
 		meshes: {
 			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
       "Flora": { url: "models/Hotspot_LittleTree.ply" },
-      "Teumman": { url: "models/Hotspot_Teumman.ply" }
+      "Teumman": { url: "models/Hotspot_Teumman.ply" },
+      "Fauna": { url: "models/Hotspot_Fauna.ply" }
 		},
 		modelInstances : {
 			"model_BanquetScene" : {
@@ -169,7 +176,12 @@ function setup3dhop() {
       },
       "Teumman": {
         mesh : "Teumman",
-        color: [1.0, 0.2, 0.2],
+        color: [0.6, 0.0, 0.0],
+        alpha: 0.5
+      },
+      "Fauna": {
+        mesh : "Fauna",
+        color: [0.6, 0.6, 0.0],
         alpha: 0.5
       }
     },
@@ -267,6 +279,7 @@ function onPickedSpot(id) {
   switch(id) {
      case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
      case 'Teumman' : toggleTextboxVisibility('text-box Teumman'); break;
+     case 'Fauna' : toggleTextboxVisibility('text-box Fauna'); break;
   }
 }
 //--PICK HOTSPOT--
