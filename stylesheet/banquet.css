@@ -21,4 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   width: 80%;
   background: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  position: absolute; bottom: 20px;
 }
