@@ -245,16 +245,20 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
-function changeVisibility(textbox_class) {
+function toggleTextboxVisibility(textbox_class) {
   const collection = document.getElementsByClassName(textbox_class);
   for (let i = 0; i < collection.length; i++) {
-    collection[i].style.visibility = "visible";
+    if (collection[i].css('visibility') == 'hidden') {
+      collection[i].style.visibility = "visible";
+    } else {
+      collection[i].style.visibility = "hidden";
+    }
   }
 }
 
 function onPickedSpot(id) {
   switch(id) {
-     case 'Flora' : changeVisibility('Flora'); break;
+     case 'Flora' : toggleTextboxVisibility('Flora'); break;
   }
 }
 //--PICK HOTSPOT--
