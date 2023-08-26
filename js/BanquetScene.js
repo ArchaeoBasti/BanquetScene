@@ -22,6 +22,7 @@ function hideAllHotspotTextboxes() {
   for (let i = 0; i < collection.length; i++) {
       collection[i].style.display = "none";
   }
+  jQuery('#Fauna').css("display","none");
 }
 
 function TextboxSwitch(textbox_id, on) {
