@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   font-family: Arial, sans-serif;
   font-size: calc(9px + .5vw);
   color: #FFFFFF;
-  visibility: hidden;
+  display: none;
 }
 
 #imprint_box {
@@ -60,10 +60,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #imprint_box td a:link, #imprint_box td a:visited {
   text-decoration: none;
-  color: #948fd9;
+  color: #aca8df;
 }
 
 #imprint_box td a:hover {
   text-decoration: none;
-  color: #58587c;
+  color: #948fd9;
 }

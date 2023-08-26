@@ -131,8 +131,14 @@
 <!--TEXTBOX-->
   <div class="text-box-wrapper">
     <div class="text-box Flora">
+      <table>
+        <tr>
+          <td>
       <b>Neo-Assyrian Flora</b><br>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
   <div class="text-box-wrapper">
@@ -317,7 +323,8 @@ function onEndPick(point) {
 //--PICK HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
-     case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
+     //case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
+     case 'Flora' : TextboxSwitch(textbox_class); break;
      case 'Teumman' : toggleTextboxVisibility('text-box Teumman'); break;
      case 'Fauna' : toggleTextboxVisibility('text-box Fauna'); break;
   }

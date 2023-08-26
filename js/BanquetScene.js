@@ -36,18 +36,26 @@ function toggleTextboxVisibility(textbox_class) {
   }
 }
 
+function TextboxSwitch(textbox_class, on) {
+  // Cloned this function from sectiontoolSwitch() of init.js
+  if(on) {
+	  jQuery(textbox_class).fadeIn().css("display","table");
+  } else {
+    jQuery(textbox_class).css("display","none");
+  }
+}
+
 function ImprintSwitch(on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
 
-  if(on){
-	jQuery('#imprint').css("visibility", "hidden");
-	jQuery('#imprint_on').css("visibility", "visible");
-	jQuery('#imprint_box').fadeIn().css("display","table");
-  }
-  else{
-	jQuery('#imprint_on').css("visibility", "hidden");
-	jQuery('#imprint').css("visibility", "visible");
-	jQuery('#imprint_box').css("display","none");
+  if(on) {
+  	jQuery('#imprint').css("visibility", "hidden");
+  	jQuery('#imprint_on').css("visibility", "visible");
+  	jQuery('#imprint_box').fadeIn().css("display","table");
+  } else {
+  	jQuery('#imprint_on').css("visibility", "hidden");
+  	jQuery('#imprint').css("visibility", "visible");
+  	jQuery('#imprint_box').css("display","none");
   }
 }
