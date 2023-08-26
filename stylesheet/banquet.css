@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   position: absolute; bottom: 20px;
 }
 
-#text-box {
+.text-box {
   width: 80%;
   margin: auto;
 
@@ -32,6 +32,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   font-family: Arial, sans-serif;
   font-size: calc(9px + .5vw);
   color: #FFFFFF;
+}
+
+#Flora {
   display: none;
 }
 
