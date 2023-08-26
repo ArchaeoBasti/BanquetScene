@@ -48,6 +48,6 @@ function ImprintSwitch(on) {
   else{
 	jQuery('#imprint_on').css("visibility", "hidden");
 	jQuery('#imprint').css("visibility", "visible");
-	jQuery('#imprint_box').fadeOut().css("display","none");
+	jQuery('#imprint_box').css("display","none");
   }
 }
