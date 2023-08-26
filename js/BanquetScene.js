@@ -38,7 +38,7 @@ function toggleTextboxVisibility(textbox_class) {
 
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
-  if(on === undefined) on = jQuery('#Flora').css("visibility")=="visible";
+  if(on === undefined) on = jQuery('#Flora').css("display")=="none";
 
   if(on) {
 	  jQuery('#Flora').fadeIn().css("display","table");

@@ -29,8 +29,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   background: rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   padding: 20px;
+}
+
+.text-box td {
   font-family: Arial, sans-serif;
-  font-size: calc(9px + .5vw);
+  font-size: calc(5px + .5vw);
+  line-height: 1.5;
   color: #FFFFFF;
 }
 
