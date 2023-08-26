@@ -57,3 +57,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     margin-left: auto;
     margin-right: auto;
 }
+
+#imprint_box td a:link, #imprint_box td a:visited {
+  text-decoration: none;
+  color: #948fd9;
+}
+
+#imprint_box td a:hover {
+  text-decoration: none;
+  color: #FFF;
+}
