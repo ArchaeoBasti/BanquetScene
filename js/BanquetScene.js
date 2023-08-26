@@ -38,6 +38,7 @@ function toggleTextboxVisibility(textbox_class) {
 
 function ImprintSwitch(on) {
   //if(on === undefined) on = jQuery('#sections').css("visibility")=="visible";
+  if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
 
   if(on){
 	jQuery('#imprint').css("visibility", "hidden");
