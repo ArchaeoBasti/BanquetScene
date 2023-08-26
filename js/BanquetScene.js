@@ -38,10 +38,12 @@ function toggleTextboxVisibility(textbox_class) {
 
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
+  if(on === undefined) on = jQuery('#' + textbox_id).css("visibility")=="visible";
+
   if(on) {
-	  jQuery("#" + textbox_id).fadeIn().css("display","table");
+	  jQuery('#' + textbox_id).fadeIn().css("display","table");
   } else {
-    jQuery("#" + textbox_id).css("display","none");
+    jQuery('#' + textbox_id).css("display","none");
   }
 }
 
