@@ -43,13 +43,13 @@ function ImprintSwitch(on) {
   if(on){
 	jQuery('#imprint').css("visibility", "hidden");
 	jQuery('#imprint_on').css("visibility", "visible");
-	//jQuery('#sections-box').fadeIn().css("display","table");
+	jQuery('#imprint_box').fadeIn().css("display","table");
 	//jQuery('#xplane, #yplane, #zplane').css("visibility", "visible");
   }
   else{
 	jQuery('#imprint_on').css("visibility", "hidden");
 	jQuery('#imprint').css("visibility", "visible");
-	//jQuery('#sections-box').css("display","none");
+	jQuery('#imprint_box').css("display","none");
 	//jQuery('#sections-box img').css("visibility", "hidden");
 	//presenter.setClippingXYZ(0, 0, 0);
   }
