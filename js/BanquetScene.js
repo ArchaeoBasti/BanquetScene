@@ -37,20 +37,17 @@ function toggleTextboxVisibility(textbox_class) {
 }
 
 function ImprintSwitch(on) {
-  //if(on === undefined) on = jQuery('#sections').css("visibility")=="visible";
+  // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
 
   if(on){
 	jQuery('#imprint').css("visibility", "hidden");
 	jQuery('#imprint_on').css("visibility", "visible");
 	jQuery('#imprint_box').fadeIn().css("display","table");
-	//jQuery('#xplane, #yplane, #zplane').css("visibility", "visible");
   }
   else{
 	jQuery('#imprint_on').css("visibility", "hidden");
 	jQuery('#imprint').css("visibility", "visible");
-	jQuery('#imprint_box').css("display","none");
-	//jQuery('#sections-box img').css("visibility", "hidden");
-	//presenter.setClippingXYZ(0, 0, 0);
+	jQuery('#imprint_box').fadeOut().css("display","none");
   }
 }
