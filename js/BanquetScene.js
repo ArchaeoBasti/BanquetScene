@@ -36,12 +36,12 @@ function toggleTextboxVisibility(textbox_class) {
   }
 }
 
-function TextboxSwitch(textbox_class, on) {
+function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on) {
-	  jQuery(textbox_class).fadeIn().css("display","table");
+	  jQuery("#" + textbox_id).fadeIn().css("display","table");
   } else {
-    jQuery(textbox_class).css("display","none");
+    jQuery("#" + textbox_id).css("display","none");
   }
 }
 

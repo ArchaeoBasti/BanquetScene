@@ -130,7 +130,7 @@
 
 <!--TEXTBOX-->
   <div class="text-box-wrapper">
-    <div class="text-box Flora">
+    <div class="text-box" id="Flora">
       <table>
         <tr>
           <td>
@@ -324,7 +324,7 @@ function onEndPick(point) {
 function onPickedSpot(id) {
   switch(id) {
      //case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
-     case 'Flora' : TextboxSwitch(textbox_class); break;
+     case 'Flora' : TextboxSwitch('Flora'); break;
      case 'Teumman' : toggleTextboxVisibility('text-box Teumman'); break;
      case 'Fauna' : toggleTextboxVisibility('text-box Fauna'); break;
   }

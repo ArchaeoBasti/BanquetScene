@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   position: absolute; bottom: 20px;
 }
 
-.text-box {
+#text-box {
   width: 80%;
   margin: auto;
 
