@@ -160,7 +160,7 @@
   </div>
 
   <div class="text-box-wrapper">
-    <div class="text-box Fauna">
+    <div class="text-box" id="Fauna">
       <table>
         <tr>
           <td><h2>Animals depicted in the Banquet Scene</h2></td>
@@ -295,7 +295,7 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--HOTSPOTS--
-  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); /*hideAllHotspotTextboxes();*/ }
+  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
