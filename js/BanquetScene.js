@@ -17,6 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// This function hides all textboxes at once, when the hotspot button is switched off or when a textbox switch is happening
 function hideAllHotspotTextboxes() {
   const collection = document.getElementsByClassName('text-box');
   for (let i = 0; i < collection.length; i++) {
@@ -24,6 +25,7 @@ function hideAllHotspotTextboxes() {
   }
 }
 
+// This function switches defined textboxes on or off depending on the current state
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#' + textbox_id).css("display")=="none";
@@ -36,6 +38,7 @@ function TextboxSwitch(textbox_id, on) {
   }
 }
 
+// This function switches the inomrint box on or off
 function ImprintSwitch(on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
