@@ -40,8 +40,14 @@ td {
   color: #FFFFFF;
 }
 
-#Flora, #Teumman, #Fauna {
+td a:link, td a:visited {
+  text-decoration: none;
+  color: #aca8df;
+}
 
+td a:hover {
+  text-decoration: none;
+  color: #948fd9;
 }
 
 #imprint_box {
@@ -54,25 +60,8 @@ td {
   padding: 20px;
 }
 
-#imprint_box td {
-  font-family: Arial, sans-serif;
-  font-size: calc(5px + .5vw);
-  line-height: 1.5;
-  color: #FFFFFF;
-}
-
 #imprint_box td img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-#imprint_box td a:link, #imprint_box td a:visited {
-  text-decoration: none;
-  color: #aca8df;
-}
-
-#imprint_box td a:hover {
-  text-decoration: none;
-  color: #948fd9;
 }

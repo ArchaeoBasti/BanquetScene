@@ -17,25 +17,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-function hideAllHotspotTextboxes() {
-  const collection = document.getElementsByClassName('text-box');
-  for (let i = 0; i < collection.length; i++) {
-      collection[i].style.visibility = "hidden";
-  }
-}
-
-function toggleTextboxVisibility(textbox_class) {
-  const collection = document.getElementsByClassName(textbox_class);
-  for (let i = 0; i < collection.length; i++) {
-    if (window.getComputedStyle(collection[i]).visibility === "hidden") {
-			hideAllHotspotTextboxes();
-      collection[i].style.visibility = "visible";
-    } else {
-      collection[i].style.visibility = "hidden";
-    }
-  }
-}
-
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#' + textbox_id).css("display")=="none";
