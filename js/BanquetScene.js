@@ -55,7 +55,7 @@ function ImprintSwitch(on) {
 }
 
 function Highlight(model) {
-// Gucken wie bei Hotspots...
+  alert("Hi!")
 }
 
 function UnHighlight(model) {
