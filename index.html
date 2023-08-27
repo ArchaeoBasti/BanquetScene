@@ -173,6 +173,21 @@
       </table>
     </div>
   </div>
+
+    <div class="text-box-wrapper">
+      <div class="text-box" id="King">
+        <table>
+          <tr>
+            <td><h2>King Ashurbanipal</h2></td>
+          </tr>
+          <tr>
+            <td>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 <!--TEXTBOX-->
 
 <!--IMPRINT-->
@@ -285,6 +300,8 @@ function setup3dhop() {
   presenter.setSpotVisibility(HOP_ALL, false, true);
   presenter._onPickedSpot = onPickedSpot;
   presenter._onPickedInstance = onPickedInstance;
+  presenter._onEnterInstance = onEnterInstance;
+  presenter._onLeaveInstance = onLeaveInstance;
 //--HOTSPOTS--
 
 //--SECTIONS--
@@ -365,7 +382,21 @@ function onPickedSpot(id) {
 function onPickedInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Test_King' : alert("King Clicked!"); break;
+       case 'model_Test_King' : TextboxSwitch('King'); break;
+    }
+  }
+}
+function onEnterInstance(id) {
+  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+    switch(id) {
+       case 'model_Test_King' : Highlight('model_Test_King'); break;
+    }
+  }
+}
+function onLeaveInstance(id) {
+  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+    switch(id) {
+       case 'model_Test_King' : UnHighlight('model_Test_King'); break;
     }
   }
 }

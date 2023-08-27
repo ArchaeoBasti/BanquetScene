@@ -53,3 +53,12 @@ function ImprintSwitch(on) {
   	jQuery('#imprint_box').css("display","none");
   }
 }
+
+function Highlight(model) {
+  presenter.toggleInstanceSolidColor(model, true);
+  colorSwitch();
+}
+
+function UnHighlight(model) {
+
+}
