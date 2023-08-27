@@ -220,14 +220,26 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
+			//"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
+      "TestPlate" : { url: "models/Test_Plate.nxz" },
+      "TestKing" : { url: "models/Test_King.nxz" },
       "Flora": { url: "models/Hotspot_LittleTree.ply" },
       "Teumman": { url: "models/Hotspot_Teumman.ply" },
       "Fauna": { url: "models/Hotspot_Fauna.ply" }
 		},
 		modelInstances : {
+      /*
 			"model_BanquetScene" : {
 				mesh  : "BanquetScene",
+				color : [0.8, 0.7, 0.75]
+			}
+      */
+      "model_Test_Plate" : {
+				mesh  : "TestPlate",
+				color : [0.8, 0.7, 0.75]
+			},
+      "model_Test_King" : {
+				mesh  : "TestKing",
 				color : [0.8, 0.7, 0.75]
 			}
 		},
