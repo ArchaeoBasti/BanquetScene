@@ -363,8 +363,10 @@ function onPickedSpot(id) {
   }
 }
 function onPickedInstance(id) {
-  switch(id) {
-     case 'model_Test_King' : alert("King Clicked!"); break;
+  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+    switch(id) {
+       case 'model_Test_King' : alert("King Clicked!"); break;
+    }
   }
 }
 //--PICK HOTSPOT--
