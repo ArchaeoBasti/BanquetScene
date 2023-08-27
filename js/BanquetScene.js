@@ -55,9 +55,11 @@ function ImprintSwitch(on) {
 }
 
 function Highlight(model) {
-  alert("Hi!")
+  presenter.toggleInstanceSolidColor(model, true);
+  colorSwitch();
 }
 
 function UnHighlight(model) {
-
+  presenter.toggleInstanceSolidColor(model, true);
+  colorSwitch();
 }
