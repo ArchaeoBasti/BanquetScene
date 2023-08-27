@@ -388,14 +388,14 @@ function onPickedInstance(id) {
 function onEnterInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Test_King' : Highlight(id); break;
+       case 'model_Test_King' : HighlightSwitch(id); break;
     }
   }
 }
 function onLeaveInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Test_King' : UnHighlight(id); break;
+       case 'model_Test_King' : HighlightSwitch(id); break;
     }
   }
 }
