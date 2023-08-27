@@ -55,8 +55,7 @@ function ImprintSwitch(on) {
 }
 
 function Highlight(model) {
-  presenter.toggleInstanceSolidColor(model, true);
-  colorSwitch();
+// Gucken wie bei Hotspots...
 }
 
 function UnHighlight(model) {

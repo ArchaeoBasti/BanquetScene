@@ -373,7 +373,6 @@ function onEndPick(point) {
 //--PICK HOTSPOT--
 function onPickedSpot(id) {
   switch(id) {
-     //case 'Flora' : toggleTextboxVisibility('text-box Flora'); break;
      case 'Flora' : TextboxSwitch('Flora'); break;
      case 'Teumman' : TextboxSwitch('Teumman'); break;
      case 'Fauna' : TextboxSwitch('Fauna'); break;
@@ -389,7 +388,7 @@ function onPickedInstance(id) {
 function onEnterInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Test_King' : Highlight('model_Test_King'); break;
+       case 'model_Test_King' : Highlight('model_Test_King'); alert(isOnHoverEnabled()); break;
     }
   }
 }
