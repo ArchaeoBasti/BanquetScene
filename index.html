@@ -284,6 +284,7 @@ function setup3dhop() {
 //--HOTSPOTS--
   presenter.setSpotVisibility(HOP_ALL, false, true);
   presenter._onPickedSpot = onPickedSpot;
+  presenter._onPickedInstance = onPickedInstance;
 //--HOTSPOTS--
 
 //--SECTIONS--
@@ -359,6 +360,11 @@ function onPickedSpot(id) {
      case 'Flora' : TextboxSwitch('Flora'); break;
      case 'Teumman' : TextboxSwitch('Teumman'); break;
      case 'Fauna' : TextboxSwitch('Fauna'); break;
+  }
+}
+function onPickedInstance(id) {
+  switch(id) {
+     case 'model_Test_King' : alert("King Clicked!"); break;
   }
 }
 //--PICK HOTSPOT--
