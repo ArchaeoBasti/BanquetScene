@@ -270,27 +270,17 @@ function setup3dhop() {
 				color : [0.73, 0.66, 0.57]
 			}
 		},
-    spots: {
-       "Spot_Teumman": {
-         mesh : "Hotspot_Teumman",
-         transform : {
-           matrix: SglMat4.mul(SglMat4.translation([ 3.3, 110.0, -7.0]),
-                     SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
-         },
-         color: [0.0, 0.25, 1.0]
-       }
-     },
-		 trackball: {
-		 	 type : TurntablePanTrackball,
-			 trackOptions : {
-				 startPhi: 20.0,
-				 startTheta: 15.0,
-				 startDistance: 1.5,
-				 minMaxPhi: [-85, 85],
-				 minMaxTheta: [-70.0, 70.0],
-				 minMaxDist: [0.5, 2.0]
-			 }
-		 }
+		trackball: {
+		  type : TurntablePanTrackball,
+		  trackOptions : {
+				startPhi: 20.0,
+				startTheta: 15.0,
+				startDistance: 1.5,
+				minMaxPhi: [-85, 85],
+				minMaxTheta: [-70.0, 70.0],
+				minMaxDist: [0.5, 2.0]
+			}
+		}
 	});
 
 //--MEASURE--
@@ -303,7 +293,7 @@ function setup3dhop() {
 
 //--HOTSPOTS--
   presenter.setSpotVisibility(HOP_ALL, false, true);
-  //presenter._onPickedSpot = onPickedSpot;
+  presenter._onPickedSpot = onPickedSpot;
   presenter._onPickedInstance = onPickedInstance;
   presenter._onEnterInstance = onEnterInstance;
   presenter._onLeaveInstance = onLeaveInstance;
