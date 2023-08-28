@@ -319,8 +319,8 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--HOTSPOTS--
-  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
-  //else if(action=='hotspot'|| action=='hotspot_on') { hotspotSwitch(true); hideAllHotspotTextboxes(); }
+  //else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
+  else if(action=='hotspot'|| action=='hotspot_on') { instanceSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
