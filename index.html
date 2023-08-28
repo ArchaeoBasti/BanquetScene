@@ -253,7 +253,7 @@ function setup3dhop() {
 			//"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
       "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
       "Hotspot_King" : { url: "models/Hotspot_King.nxz" },
-      "Hotspot_Queen": { url: "models/Hotspot_Queen.ply" }
+      "Hotspot_Queen": { url: "models/Hotspot_Queen.nxz" }
 		},
 		modelInstances : {
       "model_BanquetSceneRelief" : {
@@ -375,22 +375,16 @@ function onPickedInstance(id) {
 }
 function onEnterInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
-    presenter.toggleInstanceSolidColorByName(id, true);
-/*
     switch(id) {
-       case 'model_Test_King' : HighlightOn(id); break;
+       case 'model_Hotspot_King' : HighlightOn(id); break;
     }
-*/
   }
 }
 function onLeaveInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
-    presenter.toggleInstanceSolidColorByName(id, true);
-/*
     switch(id) {
-       case 'model_Test_King' : HighlightOff(id); break;
+       case 'model_Hotspot_King' : HighlightOff(id); break;
     }
-*/
   }
 }
 //--PICK HOTSPOT--
