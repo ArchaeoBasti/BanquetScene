@@ -254,7 +254,7 @@ function setup3dhop() {
       "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
       "Hotspot_King" : { url: "models/Hotspot_King.nxz" },
       "Hotspot_Queen": { url: "models/Hotspot_Queen.nxz" },
-      "Hotspot_Teumman": { url: "models/Hotspot_Teumman.nxz" }
+      "Hotspot_Teumman": { url: "models/Hotspot_Teumman.nxs" }
 		},
 		modelInstances : {
       "model_BanquetSceneRelief" : {
@@ -336,7 +336,7 @@ function actionsToolbar(action) {
 //--LIGHT--
 //--HOTSPOTS--
   else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
-  //else if(action=='hotspot'|| action=='hotspot_on') { instanceSwitch(); hideAllHotspotTextboxes(); }
+  //else if(action=='hotspot'|| action=='hotspot_on') { presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
