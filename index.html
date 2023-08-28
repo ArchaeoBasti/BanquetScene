@@ -253,7 +253,8 @@ function setup3dhop() {
 			//"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
       "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
       "Hotspot_King" : { url: "models/Hotspot_King.nxz" },
-      "Hotspot_Queen": { url: "models/Hotspot_Queen.nxz" }
+      "Hotspot_Queen": { url: "models/Hotspot_Queen.nxz" },
+      "Hotspot_Teumman": { url: "models/Hotspot_Teumman.ply" }
 		},
 		modelInstances : {
       "model_BanquetSceneRelief" : {
@@ -269,17 +270,27 @@ function setup3dhop() {
 				color : [0.73, 0.66, 0.57]
 			}
 		},
-		trackball: {
-			type : TurntablePanTrackball,
-			trackOptions : {
-				startPhi: 20.0,
-				startTheta: 15.0,
-				startDistance: 1.5,
-				minMaxPhi: [-85, 85],
-				minMaxTheta: [-70.0, 70.0],
-				minMaxDist: [0.5, 2.0]
-			}
-		}
+    spots: {
+       "Spot_Teumman": {
+         mesh : "Hotspot_Teumman",
+         transform : {
+           matrix: SglMat4.mul(SglMat4.translation([ 3.3, 110.0, -7.0]),
+                     SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
+         },
+         color: [0.0, 0.25, 1.0]
+       }
+     },
+		 trackball: {
+		 	 type : TurntablePanTrackball,
+			 trackOptions : {
+				 startPhi: 20.0,
+				 startTheta: 15.0,
+				 startDistance: 1.5,
+				 minMaxPhi: [-85, 85],
+				 minMaxTheta: [-70.0, 70.0],
+				 minMaxDist: [0.5, 2.0]
+			 }
+		 }
 	});
 
 //--MEASURE--
@@ -319,8 +330,8 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--HOTSPOTS--
-  //else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
-  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); instanceSwitch(); hideAllHotspotTextboxes(); }
+  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
+  //else if(action=='hotspot'|| action=='hotspot_on') { instanceSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
@@ -366,6 +377,11 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
+function onPickedSpot(id) {
+  switch(id) {
+     case 'Spot_Teumman'   : alert("Wing Hotspot Clicked"); break;
+  }
+}
 function onPickedInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
