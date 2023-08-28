@@ -53,6 +53,10 @@
   <img id="hotspot_on"  title="Hide Hotspots"          src="skins/dark/pin_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="hotspot"     title="Show Hotspots"          src="skins/dark/pin.png"/><br/>
 <!--HOTSPOTS-->
+<!--CLICKABLE INSTANCES-->
+  <img id="clickinstances_on"  title="Hide Hotspots"          src="skins/dark/pin_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="clickinstances"     title="Show Hotspots"          src="skins/dark/pin.png"/><br/>
+<!--CLICKABLE INSTANCES-->
 <!--MEASURE-->
   <img id="measure_on"  title="Disable Measure Tool"   src="skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="measure"     title="Enable Measure Tool"    src="skins/dark/measure.png"/><br/>
@@ -337,6 +341,9 @@ function actionsToolbar(action) {
 //--HOTSPOTS--
   else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
+//--CLICKABLE INSTANCES--
+	else if(action=='clickinstances' || action=='clickinstances_on') { InstanceSwitch(); }
+//--CLICKABLE INSTANCES--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
