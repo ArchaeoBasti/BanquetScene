@@ -55,17 +55,17 @@ function ImprintSwitch(on) {
 }
 
 function HighlightOn(model) {
-  //presenter.toggleInstanceSolidColorByName(model, true);
-  presenter.setInstanceVisibilityByName(model, false, true);
-  presenter.setInstanceVisibilityByName(model + "_Highlight", true, true);
+  presenter.toggleInstanceSolidColorByName(model, true);
+  //presenter.setInstanceVisibilityByName(model, false, true);
+  //presenter.setInstanceVisibilityByName(model + "_Highlight", true, true);
   //presenter.toggleInstanceVisibilityByName(model, true);
   //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
 
 function HighlightOff(model) {
-  //presenter.toggleInstanceSolidColorByName(model, true);
-  presenter.setInstanceVisibilityByName(model, true, true);
-  presenter.setInstanceVisibilityByName(model + "_Highlight", false, true);
+  presenter.toggleInstanceSolidColorByName(model, true);
+  //presenter.setInstanceVisibilityByName(model, true, true);
+  //presenter.setInstanceVisibilityByName(model + "_Highlight", false, true);
   //presenter.toggleInstanceVisibilityByName(model, true);
   //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
