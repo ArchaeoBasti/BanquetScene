@@ -188,6 +188,21 @@
         </table>
       </div>
     </div>
+
+    <div class="text-box-wrapper">
+      <div class="text-box" id="Queen">
+        <table>
+          <tr>
+            <td><h2>Queen Liballi-sharrat</h2></td>
+          </tr>
+          <tr>
+            <td>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 <!--TEXTBOX-->
 
 <!--IMPRINT-->
@@ -236,45 +251,24 @@ function setup3dhop() {
 	presenter.setScene({
 		meshes: {
 			//"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
-      "TestPlate" : { url: "models/Test_Plate.nxz" },
-      "TestKing" : { url: "models/Test_King.nxz" },
-      "Flora": { url: "models/Hotspot_LittleTree.ply" },
-      "Teumman": { url: "models/Hotspot_Teumman.ply" },
-      "Fauna": { url: "models/Hotspot_Fauna.ply" }
+      "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
+      "Hotspot_King" : { url: "models/Hotspot_King.nxz" },
+      "Hotspot_Queen": { url: "models/Hotspot_Queen.ply" }
 		},
 		modelInstances : {
-      /*
-			"model_BanquetScene" : {
-				mesh  : "BanquetScene",
-				color : [0.8, 0.7, 0.75]
-			}
-      */
-      "model_Test_Plate" : {
-				mesh  : "TestPlate",
+      "BanquetSceneRelief" : {
+				mesh  : "BanquetSceneRelief",
 				color : [0.8, 0.7, 0.75]
 			},
-      "model_Test_King" : {
-				mesh  : "TestKing",
+      "Hotspot_King" : {
+				mesh  : "Hotspot_King",
+				color : [0.73, 0.66, 0.57]
+			},
+      "Hotspot_Queen" : {
+				mesh  : "Hotspot_Queen",
 				color : [0.73, 0.66, 0.57]
 			}
 		},
-    spots: {
-      "Flora": {
-        mesh : "Flora",
-        color: [0.22, 0.67, 0.22],
-        alpha: 0.5
-      },
-      "Teumman": {
-        mesh : "Teumman",
-        color: [1.0, 0.3, 0.3],
-        alpha: 0.5
-      },
-      "Fauna": {
-        mesh : "Fauna",
-        color: [0.4, 0.6, 1.0],
-        alpha: 0.25
-      }
-    },
 		trackball: {
 			type : TurntablePanTrackball,
 			trackOptions : {
@@ -298,7 +292,7 @@ function setup3dhop() {
 
 //--HOTSPOTS--
   presenter.setSpotVisibility(HOP_ALL, false, true);
-  presenter._onPickedSpot = onPickedSpot;
+  // presenter._onPickedSpot = onPickedSpot;
   presenter._onPickedInstance = onPickedInstance;
   presenter._onEnterInstance = onEnterInstance;
   presenter._onLeaveInstance = onLeaveInstance;
@@ -371,32 +365,32 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
-function onPickedSpot(id) {
-  switch(id) {
-     case 'Flora' : TextboxSwitch('Flora'); break;
-     case 'Teumman' : TextboxSwitch('Teumman'); break;
-     case 'Fauna' : TextboxSwitch('Fauna'); break;
-  }
-}
 function onPickedInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Test_King' : TextboxSwitch('King'); break;
+       case 'Hotspot_King' : TextboxSwitch('King'); break;
+       case 'Hotspot_Queen' : TextboxSwitch('Queen'); break;
     }
   }
 }
 function onEnterInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
+    presenter.toggleInstanceSolidColorByName(id, true);
+/*
     switch(id) {
        case 'model_Test_King' : HighlightOn(id); break;
     }
+*/
   }
 }
 function onLeaveInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
+    presenter.toggleInstanceSolidColorByName(id, true);
+/*
     switch(id) {
        case 'model_Test_King' : HighlightOff(id); break;
     }
+*/
   }
 }
 //--PICK HOTSPOT--
