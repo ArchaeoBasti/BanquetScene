@@ -271,7 +271,14 @@ function setup3dhop() {
 			}
 		},
     spots: {
-
+       "Spot_Teumman": {
+         mesh : "Hotspot_Teumman",
+         transform : {
+           matrix: SglMat4.mul(SglMat4.translation([ 3.3, 110.0, -7.0]),
+                     SglMat4.rotationAngleAxis(sglDegToRad(-5.0), [0.0, 0.0, 1.0]))
+         },
+         color: [0.0, 0.25, 1.0]
+       }
      },
 		 trackball: {
 		 	 type : TurntablePanTrackball,
