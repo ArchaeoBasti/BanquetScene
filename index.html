@@ -320,7 +320,7 @@ function actionsToolbar(action) {
 //--LIGHT--
 //--HOTSPOTS--
   //else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
-  else if(action=='hotspot'|| action=='hotspot_on') { instanceSwitch(); hideAllHotspotTextboxes(); }
+  else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); instanceSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
