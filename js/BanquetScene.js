@@ -72,7 +72,7 @@ function HighlightOff(model) {
 
 function instanceSwitch(on) {
   // Cloned this function from hotspotSwitchh() of init.js
-  if(on === undefined) on = jQuery('#hotspot_on').css("visibility")==="visible";
+  if(on === undefined) on = jQuery('#hotspot').css("visibility")=="visible";
 
   if(on){
     jQuery('#hotspot').css("visibility", "hidden");
