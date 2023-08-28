@@ -260,7 +260,8 @@ function setup3dhop() {
       "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
       "Hotspot_King" : { url: "models/Hotspot_King.nxz" },
       "Hotspot_Queen": { url: "models/Hotspot_Queen.nxs" },
-      "Hotspot_Teumman": { url: "models/Hotspot_Teumman.nxs" }
+      "Hotspot_Teumman": { url: "models/Hotspot_Teumman.nxs" },
+      "Hotspot_Fauna": { url: "models/Hotspot_Fauna.nxs" }
 		},
 		modelInstances : {
       "model_BanquetSceneRelief" : {
@@ -274,10 +275,13 @@ function setup3dhop() {
       "model_Hotspot_Queen" : {
 				mesh  : "Hotspot_Queen",
 				color : [0.73, 0.66, 0.57]
-			}
-      ,
+			},
       "model_Hotspot_Teumman" : {
 				mesh  : "Hotspot_Teumman",
+				color : [0.73, 0.66, 0.57]
+			},
+      "model_Hotspot_Fauna" : {
+				mesh  : "Hotspot_Fauna",
 				color : [0.73, 0.66, 0.57]
 			}
 		},
@@ -381,6 +385,7 @@ function onPickedInstance(id) {
        case 'model_Hotspot_King' : TextboxSwitch('King'); break;
        case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
        case 'model_Hotspot_Teumman' : TextboxSwitch('Teumman'); break;
+       case 'model_Hotspot_Fauna' : TextboxSwitch('Fauna'); break;
     }
   }
 }
@@ -390,6 +395,7 @@ function onEnterInstance(id) {
        case 'model_Hotspot_King' : HighlightOn(id); break;
        case 'model_Hotspot_Queen' : HighlightOn(id); break;
        case 'model_Hotspot_Teumman' : HighlightOn(id); break;
+       case 'model_Hotspot_Fauna' : HighlightOn(id); break;
     }
   }
 }
@@ -399,6 +405,7 @@ function onLeaveInstance(id) {
        case 'model_Hotspot_King' : HighlightOff(id); break;
        case 'model_Hotspot_Queen' : HighlightOff(id); break;
        case 'model_Hotspot_Teumman' : HighlightOff(id); break;
+       case 'model_Hotspot_Fauna' : HighlightOff(id); break;
     }
   }
 }
