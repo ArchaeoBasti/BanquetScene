@@ -55,5 +55,7 @@ function ImprintSwitch(on) {
 }
 
 function HighlightSwitch(model) {
-  presenter.toggleInstanceSolidColorByName(model, true);
+  //presenter.toggleInstanceSolidColorByName(model, true);
+  presenter.toggleInstanceVisibilityByName(model, true);
+  presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
