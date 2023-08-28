@@ -342,7 +342,7 @@ function actionsToolbar(action) {
   else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); hideAllHotspotTextboxes(); }
 //--HOTSPOTS--
 //--CLICKABLE INSTANCES--
-	else if(action=='clickinstances' || action=='clickinstances_on') { InstanceSwitch(); }
+	else if(action=='clickinstances' || action=='clickinstances_on') { presenter.enableOnHover(!presenter.isOnHoverEnabled()); InstanceSwitch(); hideAllHotspotTextboxes(); }
 //--CLICKABLE INSTANCES--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
