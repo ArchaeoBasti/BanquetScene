@@ -70,7 +70,7 @@ function HighlightOff(model) {
   //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
 
-function InstanceSwitch(on) {
+function instanceSwitch(on) {
   // Cloned this function from hotspotSwitchh() of init.js
   if(on === undefined) on = jQuery('#hotspot_on').css("visibility")=="visible";
 
