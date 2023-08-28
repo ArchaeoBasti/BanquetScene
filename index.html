@@ -394,7 +394,7 @@ function onPickedSpot(id) {
   }
 }
 function onPickedInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : TextboxSwitch('King'); break;
        case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
@@ -403,7 +403,7 @@ function onPickedInstance(id) {
   }
 }
 function onEnterInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : HighlightOn(id); break;
        case 'model_Hotspot_Queen' : HighlightOn(id); break;
@@ -412,7 +412,7 @@ function onEnterInstance(id) {
   }
 }
 function onLeaveInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : HighlightOff(id); break;
        case 'model_Hotspot_Queen' : HighlightOff(id); break;

@@ -72,14 +72,14 @@ function HighlightOff(model) {
 
 function InstanceSwitch(on) {
   // Cloned this function from hotspotSwitchh() of init.js
-  if(on === undefined) on = jQuery('#hotspot').css("visibility")=="visible";
+  if(on === undefined) on = jQuery('#clickinstances').css("visibility")=="visible";
 
   if(on){
-    jQuery('#hotspot').css("visibility", "hidden");
-    jQuery('#hotspot_on').css("visibility", "visible");
+    jQuery('#clickinstances').css("visibility", "hidden");
+    jQuery('#clickinstances_on').css("visibility", "visible");
   }
   else{
-    jQuery('#hotspot_on').css("visibility", "hidden");
-    jQuery('#hotspot').css("visibility", "visible");
+    jQuery('#clickinstances_on').css("visibility", "hidden");
+    jQuery('#clickinstances').css("visibility", "visible");
   }
 }
