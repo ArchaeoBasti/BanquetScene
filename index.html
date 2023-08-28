@@ -367,7 +367,7 @@ function onEndPick(point) {
 
 //--PICK HOTSPOT--
 function onPickedInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#hotspot').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : TextboxSwitch('King'); break;
        case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
@@ -375,14 +375,14 @@ function onPickedInstance(id) {
   }
 }
 function onEnterInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#hotspot').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : HighlightOn(id); break;
     }
   }
 }
 function onLeaveInstance(id) {
-  if (jQuery('#hotspot_on').css("visibility")=="visible") {
+  if (jQuery('#hotspot').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : HighlightOff(id); break;
     }
