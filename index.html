@@ -256,15 +256,15 @@ function setup3dhop() {
       "Hotspot_Queen": { url: "models/Hotspot_Queen.ply" }
 		},
 		modelInstances : {
-      "BanquetSceneRelief" : {
+      "model_BanquetSceneRelief" : {
 				mesh  : "BanquetSceneRelief",
 				color : [0.8, 0.7, 0.75]
 			},
-      "Hotspot_King" : {
+      "model_Hotspot_King" : {
 				mesh  : "Hotspot_King",
 				color : [0.73, 0.66, 0.57]
 			},
-      "Hotspot_Queen" : {
+      "model_Hotspot_Queen" : {
 				mesh  : "Hotspot_Queen",
 				color : [0.73, 0.66, 0.57]
 			}
@@ -368,8 +368,8 @@ function onEndPick(point) {
 function onPickedInstance(id) {
   if (jQuery('#hotspot_on').css("visibility")=="visible") {
     switch(id) {
-       case 'Hotspot_King' : TextboxSwitch('King'); break;
-       case 'Hotspot_Queen' : TextboxSwitch('Queen'); break;
+       case 'model_Hotspot_King' : TextboxSwitch('King'); break;
+       case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
     }
   }
 }
