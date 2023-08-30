@@ -394,19 +394,14 @@ function onEndPick(point) {
 }
 */
 //--PICKPOINT--
-startPhi: 20.0,
-startTheta: 15.0,
-startDistance: 1.5,
-minMaxPhi: [-85, 85],
-minMaxTheta: [-70.0, 70.0],
-minMaxDist: [0.5, 2.0]
+
 //--PICK HOTSPOT--
 function onPickedInstance(id) {
   if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
        case 'model_Hotspot_King' : TextboxSwitch('King'); break;
        case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
-       case 'model_Hotspot_Teumman' : TextboxSwitch('Teumman'); break;
+       case 'model_Hotspot_Teumman' : presenter.animateToTrackballPosition([ 20.0, 15.0, 0.5]); TextboxSwitch('Teumman'); break;
        case 'model_Hotspot_Fauna' : TextboxSwitch('Fauna'); break;
        case 'model_Hotspot_Flora' : TextboxSwitch('Flora'); break;
     }
