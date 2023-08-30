@@ -431,6 +431,13 @@ function onLeaveInstance(id) {
 }
 //--PICK HOTSPOT--
 
+//--LOGGING POSITION--
+function log(msg) {
+	document.getElementById("log-text").innerHTML += msg + "\n";
+	document.getElementById("log-text").scrollTop = document.getElementById("log-text").scrollHeight;
+}
+//--LOGGING POSITION--
+
 $(document).ready(function(){
 	init3dhop();
 
