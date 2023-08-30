@@ -399,11 +399,11 @@ function onEndPick(point) {
 function onPickedInstance(id) {
   if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
-       case 'model_Hotspot_King' : TextboxSwitch('King'); break;
-       case 'model_Hotspot_Queen' : TextboxSwitch('Queen'); break;
+       case 'model_Hotspot_King' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); TextboxSwitch('King'); break;
+       case 'model_Hotspot_Queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); TextboxSwitch('Queen'); break;
        case 'model_Hotspot_Teumman' : presenter.animateToTrackballPosition([16.1, 15.0, -0.55, 0.2, 0.14, 0.5]); TextboxSwitch('Teumman'); break;
-       case 'model_Hotspot_Fauna' : TextboxSwitch('Fauna'); break;
-       case 'model_Hotspot_Flora' : TextboxSwitch('Flora'); break;
+       case 'model_Hotspot_Fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); TextboxSwitch('Fauna'); break;
+       case 'model_Hotspot_Flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); TextboxSwitch('Flora'); break;
     }
   }
 }
