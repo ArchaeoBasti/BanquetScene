@@ -17,11 +17,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-.text-box-wrapper {
-  width: 100%;
-  position: absolute; bottom: 20px;
-}
-
 .text-box {
   width: 30%;
   position: absolute; top: 10px; left: 128px;
