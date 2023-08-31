@@ -38,6 +38,17 @@ function hideAllHotspotButtonsExcept(except) {
   }
 }
 
+function toggleInstanceMenu(on) {
+  // Cloned this function from sectiontoolSwitch() of init.js
+  if(on === undefined) on = jQuery('.InstanceMenu').css("visibility")=="visible";
+
+  if(on) {
+	  jQuery('.InstanceMenu').fadeIn().css("visibility","visible");
+  } else {
+    jQuery('.InstanceMenu').css("visibility","hidden");
+  }
+}
+
 // This function switches defined textboxes on or off depending on the current state
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js

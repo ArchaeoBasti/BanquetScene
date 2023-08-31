@@ -98,7 +98,7 @@
 <!--IMPRINT-->
  </div>
 
- <div id="toolbar" style="position:absolute; left: 68px; top: 300px;">
+ <div id="toolbar" class"InstanceMenu">
    <!--KING ASHURBANIPAL-->
      <img id="king_on"      title="Turn info off"                src="skins/banquetscene/king_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="king"         title="King Ashurbanipal"            src="skins/banquetscene/king.png"/><br/>
@@ -381,7 +381,7 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--CLICKABLE INSTANCES--
-	else if(action=='clickinstances' || action=='clickinstances_on') { /* presenter.enableOnHover(!presenter.isOnHoverEnabled()); */ InstancesSwitch('clickinstances'); hideAllHotspotTextboxes(); }
+	else if(action=='clickinstances' || action=='clickinstances_on') { /* presenter.enableOnHover(!presenter.isOnHoverEnabled()); */ InstancesSwitch('clickinstances'); hideAllHotspotTextboxes(); toggleInstanceMenu(); }
 //--CLICKABLE INSTANCES--
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
 	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); TextboxSwitch('King'); }
