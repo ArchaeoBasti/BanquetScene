@@ -87,6 +87,7 @@ function InstancesSwitch(instance, on) {
   else{
     jQuery('#' + instance + '_on').css("visibility", "hidden");
     jQuery('#' + instance).css("visibility", "visible");
+    hideAllHotspotButtonsExcept();
   }
 }
 
