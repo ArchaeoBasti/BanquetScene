@@ -336,8 +336,8 @@ function setup3dhop() {
 
 //--HOTSPOTS--
   presenter._onPickedInstance = onPickedInstance;
-  //presenter._onEnterInstance = onEnterInstance;
-  //presenter._onLeaveInstance = onLeaveInstance;
+  presenter._onEnterInstance = onEnterInstance;
+  presenter._onLeaveInstance = onLeaveInstance;
 //--HOTSPOTS--
 
 //--SECTIONS--
@@ -361,7 +361,7 @@ function actionsToolbar(action) {
 	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
 //--LIGHT--
 //--CLICKABLE INSTANCES--
-	else if(action=='clickinstances' || action=='clickinstances_on') { /* presenter.enableOnHover(!presenter.isOnHoverEnabled()); */ InstancesSwitch('clickinstances'); hideAllHotspotTextboxes(); }
+	else if(action=='clickinstances' || action=='clickinstances_on') { presenter.enableOnHover(!presenter.isOnHoverEnabled()); InstancesSwitch('clickinstances'); hideAllHotspotTextboxes(); }
 //--CLICKABLE INSTANCES--
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
 	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); hideAllHotspotTextboxes(); }
@@ -421,7 +421,6 @@ function onPickedInstance(id) {
     }
   }
 }
-/*
 function onEnterInstance(id) {
   if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
@@ -444,7 +443,6 @@ function onLeaveInstance(id) {
     }
   }
 }
-*/
 //--PICK HOTSPOT--
 
 //--LOGGING POSITION--
