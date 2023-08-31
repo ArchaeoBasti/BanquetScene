@@ -40,7 +40,7 @@ function hideAllHotspotButtonsExcept(except) {
 
 function toggleInstanceMenu(on) {
   // Cloned this function from sectiontoolSwitch() of init.js
-  if(on === undefined) on = jQuery('#clickinstances').css("visibility")=="visible";
+  if(on === undefined) on = jQuery('#clickinstances_on').css("visibility")=="visible";
 
   if(on) {
 	  jQuery('#toolbar.InstanceMenu').css("visibility","visible");
