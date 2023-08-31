@@ -111,6 +111,10 @@
      <img id="teumman_on"      title="Turn info off"                src="skins/banquetscene/teumman_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="teumman"         title="King Teumman"                 src="skins/banquetscene/teumman.png"/><br/>
    <!--KING TEUMMAN-->
+   <!--FAUNA-->
+     <img id="fauna_on"      title="Turn info off"                src="skins/banquetscene/fauna_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="fauna"         title="Fauna"                        src="skins/banquetscene/fauna.png"/><br/>
+   <!--FAUNA-->
  </div>
 
 <!--MEASURE-->
@@ -339,7 +343,7 @@ function setup3dhop() {
 //--POINT PICKING--
 
 //--HOTSPOTS--
-  presenter._onPickedInstance = onPickedInstance;
+  //presenter._onPickedInstance = onPickedInstance;
   //presenter._onEnterInstance = onEnterInstance;
   //presenter._onLeaveInstance = onLeaveInstance;
 //--HOTSPOTS--
@@ -368,14 +372,17 @@ function actionsToolbar(action) {
 	else if(action=='clickinstances' || action=='clickinstances_on') { /* presenter.enableOnHover(!presenter.isOnHoverEnabled()); */ InstancesSwitch('clickinstances'); hideAllHotspotTextboxes(); }
 //--CLICKABLE INSTANCES--
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
-	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); hideAllHotspotTextboxes(); }
+	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); hideAllHotspotTextboxes(); TextboxSwitch('King'); }
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
 //--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRAT--
-	else if(action=='queen' || action=='queen_on') { InstancesSwitch('queen'); hideAllHotspotTextboxes(); }
+	else if(action=='queen' || action=='queen_on') { InstancesSwitch('queen'); hideAllHotspotTextboxes(); TextboxSwitch('Queen'); }
 //--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRATL--
 //--CLICKABLE INSTANCES KING TEUMMAN--
-	else if(action=='teumman' || action=='teumman_on') { InstancesSwitch('teumman'); hideAllHotspotTextboxes(); }
+	else if(action=='teumman' || action=='teumman_on') { InstancesSwitch('teumman'); hideAllHotspotTextboxes(); TextboxSwitch('Teumman'); }
 //--CLICKABLE INSTANCES KING TEUMMAN--
+//--CLICKABLE INSTANCES FAUNA--
+	else if(action=='fauna' || action=='fauna_on') { InstancesSwitch('fauna'); hideAllHotspotTextboxes(); TextboxSwitch('Fauna'); }
+//--CLICKABLE INSTANCES FAUNA--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
@@ -420,6 +427,7 @@ function onEndPick(point) {
 //--PICKPOINT--
 
 //--PICK HOTSPOT--
+/*
 function onPickedInstance(id) {
   if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {
@@ -431,7 +439,7 @@ function onPickedInstance(id) {
     }
   }
 }
-/*
+
 function onEnterInstance(id) {
   if (jQuery('#clickinstances_on').css("visibility")=="visible") {
     switch(id) {

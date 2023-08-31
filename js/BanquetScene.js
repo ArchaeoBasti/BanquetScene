@@ -63,11 +63,11 @@ function InstancesSwitch(instance, on) {
     jQuery('#' + instance).css("visibility", "hidden");
     jQuery('#' + instance + '_on').css("visibility", "visible");
     switch(instance) {
-       case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); TextboxSwitch('King'); break;
-       case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); TextboxSwitch('Queen'); break;
-       case 'teumman' : presenter.animateToTrackballPosition([16.1, 15.0, -0.55, 0.2, 0.14, 0.5]); TextboxSwitch('Teumman'); break;
-       case 'fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); TextboxSwitch('Fauna'); break;
-       case 'flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); TextboxSwitch('Flora'); break;
+       case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); break;
+       case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); break;
+       case 'teumman' : presenter.animateToTrackballPosition([16.1, 15.0, -0.55, 0.2, 0.14, 0.5]); break;
+       case 'fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); break;
+       case 'flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); break;
     }
   }
   else{
