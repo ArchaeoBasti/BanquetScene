@@ -328,9 +328,9 @@ function setup3dhop() {
 		 trackball: {
 		 	 type : TurntablePanTrackball,
 			 trackOptions : {
-				 startPhi: 20.0,
-				 startTheta: 15.0,
-				 startDistance: 1.5,
+				 startPhi: 0,
+				 startTheta: 2.5,
+				 startDistance: 1,
 				 minMaxPhi: [-85, 85],
 				 minMaxTheta: [-70.0, 70.0],
 				 minMaxDist: [0.5, 2.0]
@@ -358,7 +358,7 @@ function setup3dhop() {
 }
 
 function actionsToolbar(action) {
-	if(action=='home') presenter.animateToTrackballPosition([20, 15, 0, 0, 0, 1.5]);
+	if(action=='home') presenter.animateToTrackballPosition([0, 2.5, 0, 0, 0, 1]);
 //--FULLSCREEN--
 	else if(action=='full'  || action=='full_on') fullscreenSwitch();
 //--FULLSCREEN--
