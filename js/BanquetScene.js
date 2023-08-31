@@ -43,9 +43,9 @@ function toggleInstanceMenu(on) {
   if(on === undefined) on = jQuery('#clickinstances_on').css("visibility")=="visible";
 
   if(on) {
-	  jQuery('#toolbar.InstanceMenu').css("display","inline");
+	  jQuery('#toolbar.InstanceMenu').css("opacity", 1);
   } else {
-    jQuery('#toolbar.InstanceMenu').css("display","none");
+    jQuery('#toolbar.InstanceMenu').css("opacity", 0);
   }
 }
 
