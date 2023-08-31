@@ -70,16 +70,16 @@ function HighlightOff(model) {
   //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
 
-function InstanceSwitch(on) {
+function InstancesSwitch(instance, on) {
   // Cloned this function from hotspotSwitchh() of init.js
-  if(on === undefined) on = jQuery('#clickinstances').css("visibility")=="visible";
+  if(on === undefined) on = jQuery('#' + instance).css("visibility")=="visible";
 
   if(on){
-    jQuery('#clickinstances').css("visibility", "hidden");
-    jQuery('#clickinstances_on').css("visibility", "visible");
+    jQuery('#' + instance).css("visibility", "hidden");
+    jQuery('#' + instance + '_on').css("visibility", "visible");
   }
   else{
-    jQuery('#clickinstances_on').css("visibility", "hidden");
-    jQuery('#clickinstances').css("visibility", "visible");
+    jQuery('#' + instance + '_on').css("visibility", "hidden");
+    jQuery('#' + instance).css("visibility", "visible");
   }
 }
