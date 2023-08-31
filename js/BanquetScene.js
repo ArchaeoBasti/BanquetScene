@@ -44,7 +44,7 @@ function toggleInstanceMenu(on) {
 
   if(on) {
     jQuery('#toolbar.InstanceMenu').css("opacity", 0);
-    jQuery('#toolbar.InstanceMenu').css("display","inline");
+    //jQuery('#toolbar.InstanceMenu').css("display","inline");
     jQuery('#toolbar.InstanceMenu').slideDown('slow');
     jQuery('#toolbar.InstanceMenu').animate(
       { opacity: 1 },
