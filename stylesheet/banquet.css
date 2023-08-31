@@ -71,7 +71,3 @@ td a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-
-.InstanceMenu {
-  position:absolute; left: 68px; top: 300px; visibility: hidden;
-}
