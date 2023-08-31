@@ -27,8 +27,10 @@ function hideAllHotspotTextboxes() {
 
 function hideAllHotspotButtonsExcept(except) {
   const buttons = ["king", "queen", "teumman", "fauna", "flora"];
-  const index = buttons.indexOf(except);
-  const x = buttons.splice(index, 1);
+  if(except) {
+    const index = buttons.indexOf(except);
+    const x = buttons.splice(index, 1);
+  }
 
   for (const instance of buttons) {
     jQuery('#' + instance + '_on').css("visibility", "hidden");
