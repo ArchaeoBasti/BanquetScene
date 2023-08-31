@@ -98,6 +98,13 @@
 <!--IMPRINT-->
  </div>
 
+ <div id="hotspot_toolbar">
+   <!--KING ASHURBANIPAL-->
+     <img id="king_on"      title="Turn off info"                src="skins/banquetscene/king_on.png"/><br/>
+     <img id="king_on"      title="Turn on info"                 src="skins/banquetscene/king.png"/><br/>
+   <!--KING ASHURBANIPAL-->
+ </div>
+
 <!--MEASURE-->
  <div id="measure-box" class="output-box">Measured length<hr/><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span></div>
 <!--MEASURE-->
@@ -335,7 +342,7 @@ function setup3dhop() {
 }
 
 function actionsToolbar(action) {
-	if(action=='home') presenter.resetTrackball();
+	if(action=='home') presenter.animateToTrackballPosition([20, 15, 0, 0, 0, 1.5]);
 //--FULLSCREEN--
 	else if(action=='full'  || action=='full_on') fullscreenSwitch();
 //--FULLSCREEN--
