@@ -98,15 +98,19 @@
 <!--IMPRINT-->
  </div>
 
- <div id="toolbar" style="position:absolute; left:70px;">
+ <div id="toolbar" style="position:absolute; left: 70px; top: 300px;">
    <!--KING ASHURBANIPAL-->
-     <img id="king_on"      title="Turn info off"                src="skins/banquetscene/king_on.png" style="position:absolute; visibility:hidden;"/><br/>
+     <img id="king_on"      title="Turn info off"                src="skins/banquetscene/king_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="king"         title="King Ashurbanipal"            src="skins/banquetscene/king.png"/><br/>
    <!--KING ASHURBANIPAL-->
    <!--QUEEN LIBALLI-SHARRAT-->
-     <img id="queen_on"      title="Turn info off"                src="skins/banquetscene/queen_on.png" style="position:absolute; visibility:hidden;"/><br/>
+     <img id="queen_on"      title="Turn info off"                src="skins/banquetscene/queen_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="queen"         title="Queen Liballi-Sharrat"        src="skins/banquetscene/queen.png"/><br/>
    <!--QUEEN LIBALLI-SHARRAT-->
+   <!--KING TEUMMAN-->
+     <img id="teumman_on"      title="Turn info off"                src="skins/banquetscene/teumman_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="teumman"         title="King Teumman"                 src="skins/banquetscene/teumman.png"/><br/>
+   <!--KING TEUMMAN-->
  </div>
 
 <!--MEASURE-->
@@ -366,6 +370,12 @@ function actionsToolbar(action) {
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
 	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); hideAllHotspotTextboxes(); }
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
+//--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRAT--
+	else if(action=='queen' || action=='queen_on') { InstancesSwitch('queen'); hideAllHotspotTextboxes(); }
+//--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRATL--
+//--CLICKABLE INSTANCES KING TEUMMAN--
+	else if(action=='teumman' || action=='teumman_on') { InstancesSwitch('teumman'); hideAllHotspotTextboxes(); }
+//--CLICKABLE INSTANCES KING TEUMMAN--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
