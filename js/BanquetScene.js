@@ -25,6 +25,17 @@ function hideAllHotspotTextboxes() {
   }
 }
 
+function hideAllHotspotButtonsExcept(except) {
+  const buttons = ["king", "queen", "teumman", "fauna", "flora"];
+  const index = buttons.indexOf(except);
+  const x = buttons.splice(index, 1);
+
+  for (const instance of buttons) {
+    jQuery('#' + instance + '_on').css("visibility", "hidden");
+    jQuery('#' + instance).css("visibility", "visible");
+  }
+}
+
 // This function switches defined textboxes on or off depending on the current state
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
@@ -62,6 +73,7 @@ function InstancesSwitch(instance, on) {
   if(on){
     jQuery('#' + instance).css("visibility", "hidden");
     jQuery('#' + instance + '_on').css("visibility", "visible");
+    hideAllHotspotButtonsExcept(instance);
     switch(instance) {
        case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); break;
        case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); break;

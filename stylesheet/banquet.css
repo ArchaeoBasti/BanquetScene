@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 .text-box {
   width: 30%;
-  position: absolute; top: 10px; left: 70px;
+  position: absolute; top: 10px; left: 128px;
   /*margin: auto;*/
 
   background: rgba(0, 0, 0, 0.2);
