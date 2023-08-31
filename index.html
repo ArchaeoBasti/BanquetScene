@@ -115,6 +115,10 @@
      <img id="fauna_on"      title="Turn info off"                src="skins/banquetscene/fauna_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="fauna"         title="Fauna"                        src="skins/banquetscene/fauna.png"/><br/>
    <!--FAUNA-->
+   <!--FLORA-->
+     <img id="flora_on"      title="Turn info off"                src="skins/banquetscene/flora_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="flora"         title="Flora"                        src="skins/banquetscene/flora.png"/><br/>
+   <!--FLORA-->
  </div>
 
 <!--MEASURE-->
@@ -375,14 +379,17 @@ function actionsToolbar(action) {
 	else if(action=='king' || action=='king_on') { InstancesSwitch('king'); TextboxSwitch('King'); }
 //--CLICKABLE INSTANCES KING ASHURBANIPAL--
 //--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRAT--
-	else if(action=='queen' || action=='queen_on') { InstancesSwitch('queen'); hideAllHotspotTextboxes(); TextboxSwitch('Queen'); }
+	else if(action=='queen' || action=='queen_on') { InstancesSwitch('queen'); TextboxSwitch('Queen'); }
 //--CLICKABLE INSTANCES QUEEN LIBALLI-SHARRATL--
 //--CLICKABLE INSTANCES KING TEUMMAN--
-	else if(action=='teumman' || action=='teumman_on') { InstancesSwitch('teumman'); hideAllHotspotTextboxes(); TextboxSwitch('Teumman'); }
+	else if(action=='teumman' || action=='teumman_on') { InstancesSwitch('teumman'); TextboxSwitch('Teumman'); }
 //--CLICKABLE INSTANCES KING TEUMMAN--
 //--CLICKABLE INSTANCES FAUNA--
-	else if(action=='fauna' || action=='fauna_on') { InstancesSwitch('fauna'); hideAllHotspotTextboxes(); TextboxSwitch('Fauna'); }
+	else if(action=='fauna' || action=='fauna_on') { InstancesSwitch('fauna'); TextboxSwitch('Fauna'); }
 //--CLICKABLE INSTANCES FAUNA--
+//--CLICKABLE INSTANCES FLORA--
+	else if(action=='flora' || action=='flora_on') { InstancesSwitch('flora'); TextboxSwitch('Flora'); }
+//--CLICKABLE INSTANCES FLORA--
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
