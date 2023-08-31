@@ -38,7 +38,7 @@ function TextboxSwitch(textbox_id, on) {
   }
 }
 
-// This function switches the inomrint box on or off
+// This function switches the imprint box on or off
 function ImprintSwitch(on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
@@ -54,6 +54,24 @@ function ImprintSwitch(on) {
   }
 }
 
+// This function switches the different buttons on or off
+function InstancesSwitch(instance, on) {
+  // Cloned this function from hotspotSwitchh() of init.js
+  if(on === undefined) on = jQuery('#' + instance).css("visibility")=="visible";
+
+  if(on){
+    jQuery('#' + instance).css("visibility", "hidden");
+    jQuery('#' + instance + '_on').css("visibility", "visible");
+  }
+  else{
+    jQuery('#' + instance + '_on').css("visibility", "hidden");
+    jQuery('#' + instance).css("visibility", "visible");
+  }
+}
+
+
+
+//----- NOT NEEDED ANYMORE
 function HighlightOn(model) {
   presenter.toggleInstanceSolidColorByName(model, true);
   //presenter.setInstanceVisibilityByName(model, false, true);
@@ -68,18 +86,4 @@ function HighlightOff(model) {
   //presenter.setInstanceVisibilityByName(model + "_Highlight", false, true);
   //presenter.toggleInstanceVisibilityByName(model, true);
   //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
-}
-
-function InstancesSwitch(instance, on) {
-  // Cloned this function from hotspotSwitchh() of init.js
-  if(on === undefined) on = jQuery('#' + instance).css("visibility")=="visible";
-
-  if(on){
-    jQuery('#' + instance).css("visibility", "hidden");
-    jQuery('#' + instance + '_on').css("visibility", "visible");
-  }
-  else{
-    jQuery('#' + instance + '_on').css("visibility", "hidden");
-    jQuery('#' + instance).css("visibility", "visible");
-  }
 }
