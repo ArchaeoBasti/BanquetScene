@@ -25,6 +25,7 @@ function hideAllHotspotTextboxes() {
   }
 }
 
+// This function turns all secondary menu buttons inactive, except one, if specified
 function hideAllHotspotButtonsExcept(except) {
   const buttons = ["king", "queen", "teumman", "fauna", "flora"];
   if(except) {
@@ -38,6 +39,7 @@ function hideAllHotspotButtonsExcept(except) {
   }
 }
 
+// This function toggles the secondary menu on and off depending on the current state, using a fancy slide animation
 function toggleInstanceMenu(on) {
   // Cloned this function from sectiontoolSwitch() of init.js
   if(on === undefined) on = jQuery('#clickinstances_on').css("visibility")=="visible";
@@ -56,7 +58,6 @@ function toggleInstanceMenu(on) {
       { opacity: 0 },
       { queue: false, duration: 'slow' }
     );
-    //jQuery('#toolbar.InstanceMenu').css("display","none");
   }
 }
 
@@ -111,23 +112,4 @@ function InstancesSwitch(instance, on) {
     jQuery('#' + instance).css("visibility", "visible");
     hideAllHotspotButtonsExcept();
   }
-}
-
-
-
-//----- NOT NEEDED ANYMORE
-function HighlightOn(model) {
-  presenter.toggleInstanceSolidColorByName(model, true);
-  //presenter.setInstanceVisibilityByName(model, false, true);
-  //presenter.setInstanceVisibilityByName(model + "_Highlight", true, true);
-  //presenter.toggleInstanceVisibilityByName(model, true);
-  //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
-}
-
-function HighlightOff(model) {
-  presenter.toggleInstanceSolidColorByName(model, true);
-  //presenter.setInstanceVisibilityByName(model, true, true);
-  //presenter.setInstanceVisibilityByName(model + "_Highlight", false, true);
-  //presenter.toggleInstanceVisibilityByName(model, true);
-  //presenter.toggleInstanceVisibilityByName(model + "_Highlight", true);
 }
