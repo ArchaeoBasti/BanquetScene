@@ -74,10 +74,8 @@
   <img id="sections"    title="Enable Plane Sections"  src="skins/banquetscene/sections.png"/><br/>
 <!--SECTIONS-->
 <!--COLOR-->
-<!--
-  <img id="color_on"    title="Disable Solid Color"    src="skins/banquetscene/color_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="color"       title="Enable Solid Color"     src="skins/banquetscene/color.png"/><br/>
--->
+  <img id="color_on"    title="Disable Color Reconstruction"    src="skins/banquetscene/color_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="color"       title="Enable Color Reconstruction"     src="skins/banquetscene/color.png"/><br/>
 <!--COLOR-->
 <!--CAMERA-->
 <!--
@@ -401,9 +399,9 @@ function actionsToolbar(action) {
 //--CAMERA--
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
-//--COLOR--
-	//--else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
-//--COLOR--
+--COLOR--
+	--else if(action=='color' || action=='color_on') { colorSwitch(); }
+--COLOR--
 //--MEASURE--
 	else if(action=='measure' || action=='measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
 //--MEASURE--
