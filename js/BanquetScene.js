@@ -116,7 +116,7 @@ function InstancesSwitch(instance, on) {
   }
 }
 
-function togglePaintedModel {
+function togglePaintedModel() {
   if (jQuery('#color_on').css("visibility")=="visible") {
     presenter.setInstanceVisibilityByName('model_BanquetSceneRelief', false, true);
     presenter.setInstanceVisibilityByName('model_BanquetSceneReliefPainted', true, true);
