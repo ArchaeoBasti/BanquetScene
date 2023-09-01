@@ -283,7 +283,8 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" }
+			"BanquetScene" : { url: "models/SfM_DS04_DecimatedModel_2M_3DHOP.nxz" },
+      "BanquetScenePainted" : { url: "models/SfM_DS04_DecimatedModel_2M_PAINTED.nxz" }
 /*
       "BanquetSceneRelief" : { url: "models/BanquetSceneRelief.nxz" },
       "Hotspot_King" : { url: "models/Hotspot_King.nxs" },
@@ -297,6 +298,11 @@ function setup3dhop() {
       "model_BanquetSceneRelief" : {
 				mesh  : "BanquetScene",
 				color : [0.8, 0.7, 0.75]
+			},
+      "model_BanquetSceneReliefPainted" : {
+				mesh  : "BanquetScenePainted",
+				color : [0.8, 0.7, 0.75],
+        visible: false
 			}
       /*
       "model_BanquetSceneRelief" : {
@@ -400,7 +406,7 @@ function actionsToolbar(action) {
   //--else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
 //--CAMERA--
 //--COLOR--
-	else if(action=='color' || action=='color_on') { colorSwitch(); }
+	else if(action=='color' || action=='color_on') { colorSwitch(); togglePaintedModel(); }
 //--COLOR--
 //--MEASURE--
 	else if(action=='measure' || action=='measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }

@@ -115,3 +115,13 @@ function InstancesSwitch(instance, on) {
     hideAllHotspotButtonsExcept();
   }
 }
+
+function togglePaintedModel {
+  if (jQuery('#color_on').css("visibility")=="visible") {
+    presenter.setInstanceVisibilityByName('model_BanquetSceneRelief', false, false);
+    presenter.setInstanceVisibilityByName('model_BanquetSceneReliefPainted', true, true);
+  } else {
+    presenter.setInstanceVisibilityByName('model_BanquetSceneReliefPainted', false, false);
+    presenter.setInstanceVisibilityByName('model_BanquetSceneRelief', true, true);
+  }
+}
