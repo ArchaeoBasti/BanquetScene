@@ -80,8 +80,10 @@ function ImprintSwitch(on) {
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
 
   if(on) {
+
   	jQuery('#imprint').css("visibility", "hidden");
   	jQuery('#imprint_on').css("visibility", "visible");
+    if (jQuery('#clickinstances_on').css("visibility")=="visible") toggleInstanceMenu();
   	jQuery('#imprint_box').fadeIn().css("display","table");
   } else {
   	jQuery('#imprint_on').css("visibility", "hidden");
