@@ -17,10 +17,15 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+.text-box-wrapper {
+  width: 100%; margin: 10px
+  position: absolute; bottom: 0;
+}
+
 #WebsiteTitle {
-  font-size: 1.2vw;
+  font-size: 30px;
   font-family: Arial, sans-serif;
-  text-align: center; line-height: 1.2vw;
+  text-align: center; vertical-align: middle;
   color: #FFF;
   width: calc(100% - 88px); height: 40px;
   background: rgba(0, 0, 0, 0.2);
@@ -65,7 +70,7 @@ td a:hover {
 
 #imprint_box {
   width: 40%;
-  position: absolute; top: 10px; left: 68px;
+  /*position: absolute; top: 10px; left: 68px;*/
   display: none;
 
   background: rgba(0, 0, 0, 0.2);
