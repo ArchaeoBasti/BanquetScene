@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #WebsiteTitle {
   font-family: Arial, sans-serif;
-  text-align: center; vertical-align: middle;
+  text-align: center;
   color: #FFF;
   width: calc(100% - 88px); height: 40px;
   background: rgba(0, 0, 0, 0.2);
@@ -35,8 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 .text-box {
   width: 30%;
-  position: absolute; top: 706px; left: 10px;
-  /*margin: auto;*/
+  margin: auto;
 
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
