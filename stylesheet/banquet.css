@@ -18,9 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #WebsiteTitle {
-  font-size: 2vw;
+  font-size: 1.2vw;
   font-family: Arial, sans-serif;
-  text-align: center;
+  text-align: center; vertical-align: middle;
   color: #FFF;
   width: calc(100% - 88px); height: 40px;
   background: rgba(0, 0, 0, 0.2);
