@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 .text-box-wrapper {
-  width: 100%; margin: 10px
+  width: 100%; margin: 10px;
   position: absolute; bottom: 0;
 }
 
