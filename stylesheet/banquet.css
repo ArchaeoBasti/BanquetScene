@@ -23,7 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 #WebsiteTitle {
-  font-size: 30px;
   font-family: Arial, sans-serif;
   text-align: center; vertical-align: middle;
   color: #FFF;
@@ -50,7 +49,7 @@ td {
   font-family: Arial, sans-serif;
   font-size: calc(5px + .5vw);
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 td a:link, td a:visited {

@@ -45,7 +45,7 @@
 -->
 
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
- <div id="WebsiteTitle">The Banquet Scene - Interactive 3D Viewer</div>
+ <div id="WebsiteTitle"><h2>The Banquet Scene - Interactive 3D Viewer</h2></div>
  <div id="toolbar">
   <img id="home"        title="Home"                   src="skins/banquetscene/home.png"/><br/>
 <!--ZOOM-->
@@ -101,6 +101,10 @@
   <img id="full_on"     title="Exit Full Screen"       src="skins/banquetscene/full_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="full"        title="Full Screen"            src="skins/banquetscene/full.png"/><br/>
 <!--FULLSCREEN-->
+<!--AUDIO-->
+  <img id="audio_on" title="Stop Sound"           src="skins/banquetscene/audio_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="audio"    title="Start Sound"           src="skins/banquetscene/audio.png"/><br/>
+<!--AUDIO-->
 <!--IMPRINT-->
   <img id="imprint_on" title="Hide Imprint"           src="skins/banquetscene/imprint_on.png" style="position:absolute; visibility:hidden;"/>
   <img id="imprint"    title="Show Imprint"           src="skins/banquetscene/imprint.png"/><br/>
@@ -433,6 +437,9 @@ function actionsToolbar(action) {
 //--SECTIONS--
 	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
 //--SECTIONS--
+//--AUDIO--
+	else if(action=='audio' || action=='audio_on') { InstancesSwitch('audio'); }
+//--AUDIO--
 //--IMPRINT--
 	else if(action=='imprint' || action=='imprint_on') { ImprintSwitch(); }
 //--IMPRINT--
