@@ -104,7 +104,7 @@ function InstancesSwitch(instance, on) {
     switch(instance) {
        case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); break;
        case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); break;
-       case 'teumman' : presenter.animateToTrackballPosition([16.1, 15.0, -0.55, 0.2, 0.14, 0.5]); break;
+       case 'teumman' : presenter.animateToTrackballPosition([3.5,10,-0.6,0.1,0.17,0.3]); break;
        case 'fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); break;
        case 'flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); break;
     }
