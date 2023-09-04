@@ -19,8 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #WebsiteTitle {
   font-size: 50px;
-  color: LIGHTGRAY;
-  position: absolute; top: 10px; left: 68px;
+  font-family: Arial, sans-serif;
+  color: DARKGRAY;
+  position: absolute; top: 8px; left: 68px;
 }
 
 .text-box {
