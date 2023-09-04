@@ -24,13 +24,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #WebsiteTitle {
   font-family: Arial, sans-serif;
-  text-align: center; line-height: 30px;
+  text-align: center;
   color: #FFF;
   width: calc(100% - 88px); height: 40px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 5px;
   position: absolute; top: 10px; left: 68px;
+}
+
+#WebsiteTitle h2 {
+  margin: 0;
 }
 
 .text-box {
