@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 .text-box-wrapper {
-  width: 100%; margin: 10px;
-  position: absolute; bottom: 0;
+  width: 100%; padding: 10px;
+  position: absolute; bottom: 0px;
 }
 
 #WebsiteTitle {
@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   width: calc(100% - 88px); height: 40px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px; margin: auto;
   position: absolute; top: 10px; left: 68px;
 }
 
