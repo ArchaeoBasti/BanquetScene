@@ -18,10 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #WebsiteTitle {
-  font-size: 50px;
+  font-size: 40px;
   font-family: Arial, sans-serif;
-  color: DARKGRAY;
-  position: absolute; top: 8px; left: 68px;
+  color: #FFF;
+  width: calc(100% - 78px); height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: absolute; top: 10px; left: 68px;
 }
 
 .text-box {
