@@ -250,14 +250,6 @@
   <!--</div>-->
 <!--TEXTBOX-->
 
-<!--RTI-->
-  <div id="viewerCont" style="position: absolute; top: 10px; left: 10px;">
-    <script  type="text/javascript">
-      createRtiViewer("viewerCont", "rti/teumman", 900, 600);
-    </script>
-  </div>
-<!--RTI-->
-
 <!--IMPRINT-->
   <div id="imprint_box">
     <table>
@@ -518,9 +510,16 @@ $(document).ready(function(){
 });
 </script>
 <!--LOGGING POSITION-->
-  <div style="position: absolute; bottom: 10px; right: 10px;">
+  <div style="position: absolute; bottom: 10px; right: 10px; width: 400px;">
+    <textarea id="log-text" style="width:400px; height:160px; resize: none; float: left;" readonly=""></textarea>
     <button type="button" onclick="log(presenter.getTrackballPosition());" style="width: 400px; float:left;">Get Trackball Position</button>
-    <textarea id="log-text" style="width:400px; height:160px; resize: none" readonly=""></textarea>
   </div>
 <!--LOGGING POSITION-->
+<!--RTI-->
+  <div id="viewerCont" style="position: absolute; top: 10px; left: 10px;">
+    <script  type="text/javascript">
+      createRtiViewer("viewerCont", "rti/teumman", 900, 600);
+    </script>
+  </div>
+<!--RTI-->
 </html>
