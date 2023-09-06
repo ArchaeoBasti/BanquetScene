@@ -97,7 +97,7 @@ function InstancesSwitch(instance, on) {
   // Cloned this function from hotspotSwitchh() of init.js
   if(on === undefined) on = jQuery('#' + instance).css("visibility")=="visible";
 
-  if(on){
+  if(on) {
     jQuery('#' + instance).css("visibility", "hidden");
     jQuery('#' + instance + '_on').css("visibility", "visible");
     hideAllHotspotButtonsExcept(instance);
@@ -108,8 +108,7 @@ function InstancesSwitch(instance, on) {
        case 'fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); break;
        case 'flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); break;
     }
-  }
-  else{
+  } else {
     jQuery('#' + instance + '_on').css("visibility", "hidden");
     jQuery('#' + instance).css("visibility", "visible");
     hideAllHotspotButtonsExcept();
@@ -123,5 +122,22 @@ function togglePaintedModel() {
   } else {
     presenter.setInstanceVisibilityByName('model_BanquetSceneReliefPainted', false, true);
     presenter.setInstanceVisibilityByName('model_BanquetSceneRelief', true, true);
+  }
+}
+
+
+// This function switches the different buttons on or off
+function toggleAudio(on) {
+  // Cloned this function from hotspotSwitchh() of init.js
+  if(on === undefined) on = jQuery('#audio').css("visibility")=="visible";
+
+  if(on) {
+    jQuery('#audio').css("visibility", "hidden");
+    jQuery('#audio_on').css("visibility", "visible");
+    document.getElementById('MySound').play();
+  } else {
+    jQuery('#audio_on').css("visibility", "hidden");
+    jQuery('#audio').css("visibility", "visible");
+    document.getElementById('MySound').pause();
   }
 }

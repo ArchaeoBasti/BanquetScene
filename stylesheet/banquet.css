@@ -28,8 +28,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   text-align: center;
   color: #FFF;
   width: calc(100% - 88px); height: 40px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  /* background: rgba(0, 0, 0, 0.2); */
+  /* border-radius: 5px; */
   padding: 5px;
   position: absolute; top: 10px; left: 68px;
 }

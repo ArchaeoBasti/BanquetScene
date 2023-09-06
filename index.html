@@ -38,139 +38,13 @@
 </head>
 <body>
 
-<!--
- <audio controls autoplay muted>
+ <audio loop id="MySound">
+   <source src="sounds/birds-in-the-morning-24147.ogg" type="audio/ogg">
    <source src="sounds/birds-in-the-morning-24147.mp3" type="audio/mpeg">
  </audio>
--->
 
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
- <div id="WebsiteTitle">The Banquet Scene - Interactive 3D Viewer</div>
- <div id="toolbar">
-  <img id="home"        title="Home"                   src="skins/banquetscene/home.png"/><br/>
-<!--ZOOM-->
-  <img id="zoomin"      title="Zoom In"                src="skins/banquetscene/zoomin.png"/><br/>
-  <img id="zoomout"     title="Zoom Out"               src="skins/banquetscene/zoomout.png"/><br/>
-<!--ZOOM-->
-<!--LIGHTING-->
-  <img id="lighting_off" title="Enable Lighting"       src="skins/banquetscene/lighting_off.png" style="position:absolute; visibility:hidden;"/>
-  <img id="lighting"     title="Disable Lighting"      src="skins/banquetscene/lighting.png"/><br/>
-<!--LIGHTING-->
-<!--LIGHT-->
-  <img id="light_on"    title="Disable Light Control"  src="skins/banquetscene/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="light"       title="Enable Light Control"   src="skins/banquetscene/lightcontrol.png"/><br/>
-<!--LIGHT-->
-<!--HOTSPOTS-->
-<!--
-  <img id="hotspot_on"  title="Hide Hotspots"          src="skins/banquetscene/pin_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="hotspot"     title="Show Hotspots"          src="skins/banquetscene/pin.png"/><br/>
--->
-<!--HOTSPOTS-->
-<!--CLICKABLE INSTANCES-->
-  <img id="clickinstances_on"  title="Hide Hotspot Buttons"          src="skins/banquetscene/pin_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="clickinstances"     title="Show Hotspot Buttons"          src="skins/banquetscene/pin.png"/><br/>
-<!--CLICKABLE INSTANCES-->
-<!--MEASURE-->
-  <img id="measure_on"  title="Disable Measure Tool"   src="skins/banquetscene/measure_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="measure"     title="Enable Measure Tool"    src="skins/banquetscene/measure.png"/><br/>
-<!--MEASURE-->
-<!--POINT PICKING-->
-<!--
-  <img id="pick_on"     title="Disable PickPoint Mode" src="skins/banquetscene/pick_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="pick"        title="Enable PickPoint Mode"  src="skins/banquetscene/pick.png"/><br/>
--->
-<!--POINT PICKING-->
-<!--SECTIONS-->
-  <img id="sections_on" title="Disable Plane Sections" src="skins/banquetscene/sections_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="sections"    title="Enable Plane Sections"  src="skins/banquetscene/sections.png"/><br/>
-<!--SECTIONS-->
-<!--COLOR-->
-  <img id="color_on"    title="Disable Color Reconstruction"    src="skins/banquetscene/color_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="color"       title="Enable Color Reconstruction"     src="skins/banquetscene/color.png"/><br/>
-<!--COLOR-->
-<!--CAMERA-->
-<!--
-  <img id="perspective"  title="Perspective Camera"    src="skins/banquetscene/perspective.png" style="position:absolute; visibility:hidden;"/>
-  <img id="orthographic" title="Orthographic Camera"   src="skins/banquetscene/orthographic.png"/><br/>
--->
-<!--CAMERA-->
-<!--SCREENSHOT-->
-  <img id="screenshot"  title="Save Screenshot"         src="skins/banquetscene/screenshot.png"/><br/>
-<!--SCREENSHOT-->
-<!--FULLSCREEN-->
-  <img id="full_on"     title="Exit Full Screen"       src="skins/banquetscene/full_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="full"        title="Full Screen"            src="skins/banquetscene/full.png"/><br/>
-<!--FULLSCREEN-->
-<!--AUDIO-->
-  <img id="audio_on" title="Stop Sound"           src="skins/banquetscene/audio_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="audio"    title="Start Sound"           src="skins/banquetscene/audio.png"/><br/>
-<!--AUDIO-->
-<!--IMPRINT-->
-  <img id="imprint_on" title="Hide Imprint"           src="skins/banquetscene/imprint_on.png" style="position:absolute; visibility:hidden;"/>
-  <img id="imprint"    title="Show Imprint"           src="skins/banquetscene/imprint.png"/><br/>
-<!--IMPRINT-->
- </div>
-
- <div id="toolbar" class="InstanceMenu" style="display: none;">
-   <!--KING ASHURBANIPAL-->
-     <img id="king_on"      title="Turn info off"                src="skins/banquetscene/king_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="king"         title="King Ashurbanipal"            src="skins/banquetscene/king.png"/><br/>
-   <!--KING ASHURBANIPAL-->
-   <!--QUEEN LIBALLI-SHARRAT-->
-     <img id="queen_on"      title="Turn info off"                src="skins/banquetscene/queen_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="queen"         title="Queen Liballi-Sharrat"        src="skins/banquetscene/queen.png"/><br/>
-   <!--QUEEN LIBALLI-SHARRAT-->
-   <!--KING TEUMMAN-->
-     <img id="teumman_on"      title="Turn info off"                src="skins/banquetscene/teumman_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="teumman"         title="King Teumman"                 src="skins/banquetscene/teumman.png"/><br/>
-   <!--KING TEUMMAN-->
-   <!--FAUNA-->
-     <img id="fauna_on"      title="Turn info off"                src="skins/banquetscene/fauna_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="fauna"         title="Fauna"                        src="skins/banquetscene/fauna.png"/><br/>
-   <!--FAUNA-->
-   <!--FLORA-->
-     <img id="flora_on"      title="Turn info off"                src="skins/banquetscene/flora_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="flora"         title="Flora"                        src="skins/banquetscene/flora.png"/><br/>
-   <!--FLORA-->
- </div>
-
-<!--MEASURE-->
- <div id="measure-box" class="output-box">Measured length<hr/><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span></div>
-<!--MEASURE-->
-
-<!--POINT PICKING-->
-<!--
- <div id="pickpoint-box" class="output-box">XYZ picked point<hr/><span id="pickpoint-output" class="output-text" onmousedown="event.stopPropagation()">[ 0 , 0 , 0 ]</span></div>
--->
-<!--POINT PICKING-->
-
-<!--SECTIONS-->
- <div id="sections-box" class="output-box">
-  <table class="output-table" onmousedown="event.stopPropagation()">
-	<tr><td>Plane</td><td>Position</td><td>Flip</td></tr>
-	<tr>
-		<td><img   id="xplane_on"    title="Disable X Axis Section" src="skins/icons/sectionX_on.png" onclick="sectionxSwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
-			<img   id="xplane"       title="Enable X Axis Section"  src="skins/icons/sectionX.png"  onclick="sectionxSwitch()"/><br/></td>
-		<td><input id="xplaneSlider" class="output-input"  type="range"    title="Move X Axis Section Position"/></td>
-		<td><input id="xplaneFlip"   class="output-input"  type="checkbox" title="Flip X Axis Section Direction"/></td></tr>
-	<tr>
-		<td><img   id="yplane_on"    title="Disable Y Axis Section" src="skins/icons/sectionY_on.png" onclick="sectionySwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
-			<img   id="yplane"       title="Enable Y Axis Section"  src="skins/icons/sectionY.png"  onclick="sectionySwitch()"/><br/></td>
-		<td><input id="yplaneSlider" class="output-input"  type="range"    title="Move Y Axis Section Position"/></td>
-		<td><input id="yplaneFlip"   class="output-input"  type="checkbox" title="Flip Y Axis Section Direction"/></td></tr>
-	<tr>
-		<td><img   id="zplane_on"    title="Disable Z Axis Section" src="skins/icons/sectionZ_on.png" onclick="sectionzSwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
-			<img   id="zplane"       title="Enable Z Axis Section"  src="skins/icons/sectionZ.png"  onclick="sectionzSwitch()"/><br/></td>
-		<td><input id="zplaneSlider" class="output-input"  type="range"    title="Move Y Axis Section Position"/></td>
-		<td><input id="zplaneFlip"   class="output-input"  type="checkbox" title="Flip Z Axis Section Direction"/></td></tr></table>
-  <table class="output-table" onmousedown="event.stopPropagation()" style="text-align:right;">
-	<tr>
-	 <td>Show planes<input id="showPlane" class="output-input" type="checkbox" title="Show Section Planes" style="bottom:-3px;"/></td>
-	 <td>Show edges<input  id="showBorder" class="output-input" type="checkbox" title="Show Section Edges" style="bottom:-3px;"/></td></tr></table>
- </div>
-<!--SECTIONS-->
-
-<!--TEXTBOX-->
+<!--TEXTBOX (needs to come first so wrapper doesn't block buttons)-->
     <div class="text-box-wrapper">
       <div class="text-box" id="Flora">
         <table>
@@ -287,6 +161,135 @@
   </div>
 <!--IMPRINT-->
 
+ <div id="WebsiteTitle">The Banquet Scene - Interactive 3D Viewer</div>
+ <div id="toolbar">
+  <img id="home"        title="Home"                   src="skins/banquetscene/home.png"/><br/>
+<!--ZOOM-->
+  <img id="zoomin"      title="Zoom In"                src="skins/banquetscene/zoomin.png"/><br/>
+  <img id="zoomout"     title="Zoom Out"               src="skins/banquetscene/zoomout.png"/><br/>
+<!--ZOOM-->
+<!--LIGHTING-->
+  <img id="lighting_off" title="Enable Lighting"       src="skins/banquetscene/lighting_off.png" style="position:absolute; visibility:hidden;"/>
+  <img id="lighting"     title="Disable Lighting"      src="skins/banquetscene/lighting.png"/><br/>
+<!--LIGHTING-->
+<!--LIGHT-->
+  <img id="light_on"    title="Disable Light Control"  src="skins/banquetscene/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="light"       title="Enable Light Control"   src="skins/banquetscene/lightcontrol.png"/><br/>
+<!--LIGHT-->
+<!--HOTSPOTS-->
+<!--
+  <img id="hotspot_on"  title="Hide Hotspots"          src="skins/banquetscene/pin_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="hotspot"     title="Show Hotspots"          src="skins/banquetscene/pin.png"/><br/>
+-->
+<!--HOTSPOTS-->
+<!--CLICKABLE INSTANCES-->
+  <img id="clickinstances_on"  title="Hide Hotspot Buttons"          src="skins/banquetscene/pin_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="clickinstances"     title="Show Hotspot Buttons"          src="skins/banquetscene/pin.png"/><br/>
+<!--CLICKABLE INSTANCES-->
+<!--MEASURE-->
+  <img id="measure_on"  title="Disable Measure Tool"   src="skins/banquetscene/measure_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="measure"     title="Enable Measure Tool"    src="skins/banquetscene/measure.png"/><br/>
+<!--MEASURE-->
+<!--POINT PICKING-->
+<!--
+  <img id="pick_on"     title="Disable PickPoint Mode" src="skins/banquetscene/pick_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="pick"        title="Enable PickPoint Mode"  src="skins/banquetscene/pick.png"/><br/>
+-->
+<!--POINT PICKING-->
+<!--SECTIONS-->
+<!--
+  <img id="sections_on" title="Disable Plane Sections" src="skins/banquetscene/sections_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="sections"    title="Enable Plane Sections"  src="skins/banquetscene/sections.png"/><br/>
+-->
+<!--SECTIONS-->
+<!--COLOR-->
+  <img id="color_on"    title="Disable Color Reconstruction"    src="skins/banquetscene/color_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="color"       title="Enable Color Reconstruction"     src="skins/banquetscene/color.png"/><br/>
+<!--COLOR-->
+<!--CAMERA-->
+<!--
+  <img id="perspective"  title="Perspective Camera"    src="skins/banquetscene/perspective.png" style="position:absolute; visibility:hidden;"/>
+  <img id="orthographic" title="Orthographic Camera"   src="skins/banquetscene/orthographic.png"/><br/>
+-->
+<!--CAMERA-->
+<!--SCREENSHOT-->
+  <img id="screenshot"  title="Save Screenshot"         src="skins/banquetscene/screenshot.png"/><br/>
+<!--SCREENSHOT-->
+<!--FULLSCREEN-->
+  <img id="full_on"     title="Exit Full Screen"       src="skins/banquetscene/full_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="full"        title="Full Screen"            src="skins/banquetscene/full.png"/><br/>
+<!--FULLSCREEN-->
+<!--AUDIO-->
+  <img id="audio_on" title="Stop Sound"           src="skins/banquetscene/audio_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="audio"    title="Start Sound"           src="skins/banquetscene/audio.png"/><br/>
+<!--AUDIO-->
+<!--IMPRINT-->
+  <img id="imprint_on" title="Hide Imprint"           src="skins/banquetscene/imprint_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="imprint"    title="Show Imprint"           src="skins/banquetscene/imprint.png"/><br/>
+<!--IMPRINT-->
+ </div>
+
+ <div id="toolbar" class="InstanceMenu" style="display: none;">
+   <!--KING ASHURBANIPAL-->
+     <img id="king_on"      title="Turn info off"                src="skins/banquetscene/king_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="king"         title="King Ashurbanipal"            src="skins/banquetscene/king.png"/><br/>
+   <!--KING ASHURBANIPAL-->
+   <!--QUEEN LIBALLI-SHARRAT-->
+     <img id="queen_on"      title="Turn info off"                src="skins/banquetscene/queen_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="queen"         title="Queen Liballi-Sharrat"        src="skins/banquetscene/queen.png"/><br/>
+   <!--QUEEN LIBALLI-SHARRAT-->
+   <!--KING TEUMMAN-->
+     <img id="teumman_on"      title="Turn info off"                src="skins/banquetscene/teumman_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="teumman"         title="King Teumman"                 src="skins/banquetscene/teumman.png"/><br/>
+   <!--KING TEUMMAN-->
+   <!--FAUNA-->
+     <img id="fauna_on"      title="Turn info off"                src="skins/banquetscene/fauna_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="fauna"         title="Fauna"                        src="skins/banquetscene/fauna.png"/><br/>
+   <!--FAUNA-->
+   <!--FLORA-->
+     <img id="flora_on"      title="Turn info off"                src="skins/banquetscene/flora_on.png" style="position:absolute; visibility:hidden;"/>
+     <img id="flora"         title="Flora"                        src="skins/banquetscene/flora.png"/><br/>
+   <!--FLORA-->
+ </div>
+
+<!--MEASURE-->
+ <div id="measure-box" class="output-box">Measured length<hr/><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span></div>
+<!--MEASURE-->
+
+<!--POINT PICKING-->
+<!--
+ <div id="pickpoint-box" class="output-box">XYZ picked point<hr/><span id="pickpoint-output" class="output-text" onmousedown="event.stopPropagation()">[ 0 , 0 , 0 ]</span></div>
+-->
+<!--POINT PICKING-->
+
+<!--SECTIONS-->
+<!--
+ <div id="sections-box" class="output-box">
+  <table class="output-table" onmousedown="event.stopPropagation()">
+	<tr><td>Plane</td><td>Position</td><td>Flip</td></tr>
+	<tr>
+		<td><img   id="xplane_on"    title="Disable X Axis Section" src="skins/icons/sectionX_on.png" onclick="sectionxSwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
+			<img   id="xplane"       title="Enable X Axis Section"  src="skins/icons/sectionX.png"  onclick="sectionxSwitch()"/><br/></td>
+		<td><input id="xplaneSlider" class="output-input"  type="range"    title="Move X Axis Section Position"/></td>
+		<td><input id="xplaneFlip"   class="output-input"  type="checkbox" title="Flip X Axis Section Direction"/></td></tr>
+	<tr>
+		<td><img   id="yplane_on"    title="Disable Y Axis Section" src="skins/icons/sectionY_on.png" onclick="sectionySwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
+			<img   id="yplane"       title="Enable Y Axis Section"  src="skins/icons/sectionY.png"  onclick="sectionySwitch()"/><br/></td>
+		<td><input id="yplaneSlider" class="output-input"  type="range"    title="Move Y Axis Section Position"/></td>
+		<td><input id="yplaneFlip"   class="output-input"  type="checkbox" title="Flip Y Axis Section Direction"/></td></tr>
+	<tr>
+		<td><img   id="zplane_on"    title="Disable Z Axis Section" src="skins/icons/sectionZ_on.png" onclick="sectionzSwitch()" style="position:absolute; visibility:hidden; border:1px inset;"/>
+			<img   id="zplane"       title="Enable Z Axis Section"  src="skins/icons/sectionZ.png"  onclick="sectionzSwitch()"/><br/></td>
+		<td><input id="zplaneSlider" class="output-input"  type="range"    title="Move Y Axis Section Position"/></td>
+		<td><input id="zplaneFlip"   class="output-input"  type="checkbox" title="Flip Z Axis Section Direction"/></td></tr></table>
+  <table class="output-table" onmousedown="event.stopPropagation()" style="text-align:right;">
+	<tr>
+	 <td>Show planes<input id="showPlane" class="output-input" type="checkbox" title="Show Section Planes" style="bottom:-3px;"/></td>
+	 <td>Show edges<input  id="showBorder" class="output-input" type="checkbox" title="Show Section Edges" style="bottom:-3px;"/></td></tr></table>
+ </div>
+-->
+<!--SECTIONS-->
+
   <canvas id="draw-canvas" style="background: linear-gradient(0deg, rgba(87,108,108,1) 0%, rgba(209,228,216,1) 100%);"/>
 </div>
 </body>
@@ -381,7 +384,7 @@ function setup3dhop() {
 //--HOTSPOTS--
 
 //--SECTIONS--
-	sectiontoolInit();
+	// sectiontoolInit();
 //--SECTIONS--
 }
 
@@ -437,7 +440,7 @@ function actionsToolbar(action) {
 	else if(action=='sections' || action=='sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
 //--SECTIONS--
 //--AUDIO--
-	else if(action=='audio' || action=='audio_on') { InstancesSwitch('audio'); }
+	else if(action=='audio' || action=='audio_on') { toggleAudio(); }
 //--AUDIO--
 //--IMPRINT--
 	else if(action=='imprint' || action=='imprint_on') { ImprintSwitch(); }
