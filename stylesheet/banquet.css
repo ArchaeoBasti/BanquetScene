@@ -16,65 +16,47 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+body {
+  font-family: Arial, sans-serif;
+  color: #FFF;
+}
+
+#WebsiteTitle {
+  font-size: 30px; font-weight: bold;
+  text-align: center;
+  width: calc(100% - 88px); height: 40px;
+  position: absolute; top: 10px; left: 68px;
+}
 
 .text-box-wrapper {
   width: 100%;
   position: absolute; bottom: 10px;
 }
 
-#WebsiteTitle {
-  font-family: Arial, sans-serif;
-  font-size: 30px; font-weight: bold;
-  text-align: center;
-  color: #FFF;
-  width: calc(100% - 88px); height: 40px;
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* border-radius: 5px; */
-  padding: 5px;
-  position: absolute; top: 10px; left: 68px;
-}
-
-.text-box {
-  width: 30%;
-  margin: auto;
-
+.boxes {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px;
+}
 
+.text-box {
+  width: 40%;
+  margin: auto;
   display: none;
 }
 
 td {
-  font-family: Arial, sans-serif;
-  font-size: calc(5px + .5vw);
+  font-size: calc(9px + .4vw);
   line-height: 1.5;
-  color: #FFF;
 }
 
-td a:link, td a:visited {
+td a:link, td a:visited, td a:hover {
   text-decoration: none;
   color: #aca8df;
 }
 
 td a:hover {
-  text-decoration: none;
   color: #948fd9;
-}
-
-.Quote {
-  text-align: right;
-  font-style: italic;
-}
-
-#imprint_box {
-  width: 40%; margin: auto;
-  /*position: absolute; top: 10px; left: 68px;*/
-  display: none;
-
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 20px;
 }
 
 #imprint_box td img {

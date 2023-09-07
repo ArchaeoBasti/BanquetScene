@@ -68,6 +68,7 @@ function TextboxSwitch(textbox_id, on) {
 
   if(on) {
     hideAllHotspotTextboxes()
+    if (jQuery('#imprint_on').css("visibility")=="visible") ImprintSwitch(false);
 	  jQuery('#' + textbox_id).fadeIn().css("display","table");
   } else {
     jQuery('#' + textbox_id).css("display","none");
@@ -83,7 +84,11 @@ function ImprintSwitch(on) {
 
   	jQuery('#imprint').css("visibility", "hidden");
   	jQuery('#imprint_on').css("visibility", "visible");
-    if (jQuery('#clickinstances_on').css("visibility")=="visible") { InstancesSwitch(); }
+    if (jQuery('#clickinstances_on').css("visibility")=="visible") {
+       hideAllHotspotTextboxes();
+       toggleInstanceMenu(false);
+       InstancesSwitch('clickinstances');
+     }
   	jQuery('#imprint_box').fadeIn().css("display","table");
   } else {
   	jQuery('#imprint_on').css("visibility", "hidden");
@@ -125,7 +130,6 @@ function togglePaintedModel() {
   }
 }
 
-
 // This function switches the different buttons on or off
 function toggleAudio(on) {
   // Cloned this function from hotspotSwitchh() of init.js
@@ -139,5 +143,17 @@ function toggleAudio(on) {
     jQuery('#audio_on').css("visibility", "hidden");
     jQuery('#audio').css("visibility", "visible");
     document.getElementById('MySound').pause();
+  }
+}
+
+function toggleRTI(on) {
+  // Cloned this function from hotspotSwitchh() of init.js
+  if(on === undefined) on = jQuery('#TeummanRTIframe').css("display")=="none";
+
+  if(on) {
+    presenter.animateToTrackballPosition([0,2.5,-0.5736600000000008,0.14408273451653547,-0.006290788045828761,0.33]);
+    jQuery('#TeummanRTIframe').fadeIn().css("display","inline");
+  } else {
+    jQuery('#TeummanRTIframe').css("display","none");
   }
 }
