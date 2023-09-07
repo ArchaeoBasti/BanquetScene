@@ -30,7 +30,7 @@ body {
 
 .text-box-wrapper {
   width: 100%;
-  position: absolute; bottom: 10px;
+  position: absolute; bottom: 15px;
 }
 
 .boxes {
@@ -45,8 +45,15 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1000px) {
+  .text-box {
+    width: 80%;
+
+  }
+}
+
 td {
-  font-size: calc(9px + .4vw);
+  font-size: calc(10px + .4vw);
   line-height: 1.5;
 }
 

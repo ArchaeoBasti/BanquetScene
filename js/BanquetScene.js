@@ -87,6 +87,7 @@ function ImprintSwitch(on) {
     if (jQuery('#clickinstances_on').css("visibility")=="visible") {
        hideAllHotspotTextboxes();
        toggleInstanceMenu(false);
+       toggleRTI(false);
        InstancesSwitch('clickinstances');
      }
   	jQuery('#imprint_box').fadeIn().css("display","table");
@@ -106,6 +107,7 @@ function InstancesSwitch(instance, on) {
     jQuery('#' + instance).css("visibility", "hidden");
     jQuery('#' + instance + '_on').css("visibility", "visible");
     hideAllHotspotButtonsExcept(instance);
+    toggleRTI(false);
     switch(instance) {
        case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); break;
        case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); break;
