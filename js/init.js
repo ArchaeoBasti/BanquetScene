@@ -30,8 +30,8 @@ function init3dhop() {
 			else jQuery(this).css("opacity","1.0");
 		})
 		.mouseout(function(e) {
-			clearInterval(interval); 
-			jQuery(this).css("opacity","0.5");
+			clearInterval(interval);
+			jQuery(this).css("opacity","1");
 		})
 		.mousedown(function(e) {
 			id = jQuery(this).attr('id');
@@ -44,7 +44,7 @@ function init3dhop() {
 					}, 100);
 				}
 				else {
-					clearInterval(interval); 
+					clearInterval(interval);
 				}
 				jQuery(this).css("opacity","1.0");
 				button=0;
@@ -53,12 +53,12 @@ function init3dhop() {
 		.mouseup(function(e) {
 			ismousedown = false;
 			if(e.button==button){
-				clearInterval(interval); 
+				clearInterval(interval);
 				jQuery(this).css("opacity","0.8");
 				button=0;
 			}
 		})
-		.on('touchstart', function(e) { 
+		.on('touchstart', function(e) {
 			button=2;
 		})
 		.on('touchend', function(e) {
@@ -69,14 +69,14 @@ function init3dhop() {
 
 	jQuery('#3dhop')
 		.on('touchstart pointerdown', function(e) {
-			jQuery('#toolbar img').css("opacity","0.5");
+			jQuery('#toolbar img').css("opacity","1");
 		})
 		.on('touchend pointerup', function(e) {
-			clearInterval(interval); 
+			clearInterval(interval);
 		})
 		.on('touchmove', function(e) {
-			clearInterval(interval); 
-			jQuery('#toolbar img').css("opacity","0.5");
+			clearInterval(interval);
+			jQuery('#toolbar img').css("opacity","1");
 		});
 
 	jQuery('#3dhop:not(#draw-canvas)').on('contextmenu', function(e) { return false; });
@@ -86,20 +86,20 @@ function init3dhop() {
 			if (!isMobile()) return false; //MOBILE DEVICES CHECK
 		})
 		.on('touchstart pointerdown', function(e) {
-			jQuery('#toolbar img').css("opacity","0.5");
+			jQuery('#toolbar img').css("opacity","1");
 		})
-		.mousedown(function(e) { 
-			jQuery('#toolbar img').css("opacity","0.5"); 
-			if(e.preventDefault) e.preventDefault(); 
+		.mousedown(function(e) {
+			jQuery('#toolbar img').css("opacity","1");
+			if(e.preventDefault) e.preventDefault();
 			if (window.getSelection && window.getSelection()!='') window.getSelection().removeAllRanges();
 			else if (document.selection && document.selection.createRange()!='') document.selection.empty();
 		});
 
-	jQuery(document).on('MSFullscreenChange mozfullscreenchange webkitfullscreenchange', function(e) { //fullscreen handler 
+	jQuery(document).on('MSFullscreenChange mozfullscreenchange webkitfullscreenchange', function(e) { //fullscreen handler
 		if(!document.msFullscreenElement&&!document.mozFullScreen&&!document.webkitIsFullScreen) exitFullscreen();
 	});
 
-	if (window.navigator.userAgent.indexOf('Trident/') > 0) { //IE fullscreen handler 
+	if (window.navigator.userAgent.indexOf('Trident/') > 0) { //IE fullscreen handler
 		jQuery('#full').click(function() {enterFullscreen();});
 		jQuery('#full_on').click(function() {exitFullscreen();});
 	}
@@ -149,12 +149,12 @@ function set3dhlg() {
   jQuery('#tdhlg').css({right:2, bottom:2});
   jQuery('#tdhlg').html("Powered by 3DHOP</br>CNR &nbsp;&ndash;&nbsp; ISTI");
   jQuery('#tdhlg').mouseover(function() {
-	 jQuery('#tdhlg').animate({ 
+	 jQuery('#tdhlg').animate({
 		height: "25px"
 	  }, "fast" );
 	 })
 	.mouseout(function() {
-	 jQuery('#tdhlg').animate({ 
+	 jQuery('#tdhlg').animate({
 		height: "13px"
 	  }, "slow" );
 	 });
@@ -209,7 +209,7 @@ function hotspotSwitch(on) {
 function pickpointSwitch(on) {
   if(on === undefined) on = presenter.isPickpointModeEnabled();
 
-  if(on){  
+  if(on){
     jQuery('#pick').css("visibility", "hidden");
     jQuery('#pick_on').css("visibility", "visible");
     jQuery('#pickpoint-box').fadeIn().css("display","table");
@@ -229,7 +229,7 @@ function pickpointSwitch(on) {
 function measureSwitch(on) {
   if(on === undefined) on = presenter.isMeasurementToolEnabled();
 
-  if(on){  
+  if(on){
     jQuery('#measure').css("visibility", "hidden");
     jQuery('#measure_on').css("visibility", "visible");
     jQuery('#measure-box').fadeIn().css("display","table");
@@ -308,7 +308,7 @@ function sectiontoolInit() {
 	// set sections value
 	presenter.setClippingPointXYZ(0.5, 0.5, 0.5);
 
-	// set sliders 
+	// set sliders
 	var xplaneSlider = jQuery('#xplaneSlider')[0];
 	xplaneSlider.min = 0.0;
 	xplaneSlider.max = 1.0;
@@ -360,7 +360,7 @@ function sectiontoolInit() {
 			else presenter.setClippingZ(1);
 		}
 	};
-	
+
 	var planesCheck = jQuery('#showPlane')[0];
 	planesCheck.defaultChecked = presenter.getClippingRendermode()[0];
 	planesCheck.onchange = function(){ presenter.setClippingRendermode(this.checked, presenter.getClippingRendermode()[1]); };
@@ -374,14 +374,14 @@ function sectiontoolReset() {
 	// reset sections value
 	presenter.setClippingPointXYZ(0.5, 0.5, 0.5);
 
-	// reset sliders 
+	// reset sliders
 	var xplaneSlider = jQuery('#xplaneSlider')[0];
 	xplaneSlider.value = xplaneSlider.defaultValue;
 
 	var yplaneSlider = jQuery('#yplaneSlider')[0];
 	yplaneSlider.value = yplaneSlider.defaultValue;
 
-	var zplaneSlider = jQuery('#zplaneSlider')[0]; 
+	var zplaneSlider = jQuery('#zplaneSlider')[0];
 	zplaneSlider.value = zplaneSlider.defaultValue;
 
 	// reset checkboxes
@@ -409,7 +409,7 @@ function sectionxSwitch(on) {
 	if(on){
 		jQuery('#xplane').css("visibility", "hidden");
 		jQuery('#xplane_on').css("visibility", "visible");
-		var xplaneFlip = jQuery('#xplaneFlip')[0]; 
+		var xplaneFlip = jQuery('#xplaneFlip')[0];
 		if(xplaneFlip.checked) presenter.setClippingX(-1);
 		else presenter.setClippingX(1);
 	}
@@ -498,7 +498,7 @@ function exitFullscreen() {
   else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
   else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
 
-  presenter.ui.postDrawEvent(); 
+  presenter.ui.postDrawEvent();
 }
 
 function showPanel(id) {
@@ -567,7 +567,7 @@ function resizeCanvas(w,h) {
 }
 
 function anchorPanels() {
-	if (jQuery('#pickpoint-box')[0] && jQuery('#pick')[0]) 
+	if (jQuery('#pickpoint-box')[0] && jQuery('#pick')[0])
 	{
 		jQuery('#pickpoint-box').css('left', (jQuery('#pick').position().left + jQuery('#pick').width() + jQuery('#toolbar').position().left + 5));
 		jQuery('#pickpoint-box').css('top', (jQuery('#pick').position().top + jQuery('#toolbar').position().top));
@@ -577,7 +577,7 @@ function anchorPanels() {
 		jQuery('#measure-box').css('left', (jQuery('#measure').position().left + jQuery('#measure').width() + jQuery('#toolbar').position().left + 5));
 		jQuery('#measure-box').css('top', (jQuery('#measure').position().top + jQuery('#toolbar').position().top));
 	}
-	if (jQuery('#sections-box')[0] && jQuery('#sections')[0]) 
+	if (jQuery('#sections-box')[0] && jQuery('#sections')[0])
 	{
 		jQuery('#sections-box').css('left', (jQuery('#sections').position().left + jQuery('#sections').width() + jQuery('#toolbar').position().left + 5));
 		jQuery('#sections-box').css('top', (jQuery('#sections').position().top + jQuery('#toolbar').position().top));

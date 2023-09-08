@@ -8,18 +8,18 @@
 
 	body
 	{
-		margin: 4px;
+		margin: 0px;
 		overflow: hidden;
 		/*height: 100%;*/
 	}
-	
+
 	.toolbarButton, .toolbarButton2
 	{
 		margin-bottom: 10px !important;
 		background: rgba(0, 0, 0, 0.0) !important;
 		border: 0px !important;
 	}
-	
+
 	.toolbarIcon
 	{
 		width: 100%;
@@ -30,50 +30,50 @@
 		margin: 0px !important;
 		opacity: 0.85;
 	}
-	
+
 	.zoomInIcon
 	{
 		background-image: url(icons/zoomin.png) !important;
-		
+
 	}
 
 	.zoomOutIcon
 	{
 		background-image: url(icons/zoomout.png) !important;
 	}
-	
+
 	.lightIcon
 	{
 		background-image: url(icons/light.png) !important;
 	}
-	
+
 	.lightOnIcon
 	{
 		background-image: url(icons/light_on.png) !important;
 	}
-	
+
 	.helpIcon
 	{
 		background-image: url(icons/help.png) !important;
 	}
-	
+
 	.fullIcon
 	{
 		background-image: url(icons/full.png) !important;
 	}
-	
+
 	.fullOnIcon
 	{
 		background-image: url(icons/full_on.png) !important;
 	}
-	
-	
+
+
 	.ui-state-hover .toolbarIcon
 	{
 		opacity: 1.0;
 	}
-	
-	
+
+
 	#guideTable
 	{
 		display:table;
@@ -82,7 +82,7 @@
 		font-size: 15px;
 		font-family: Verdana,sans-serif;
 	}
-	
+
 	#guideCell
 	{
 		display: table-cell;
@@ -90,24 +90,24 @@
 		vertical-align: middle;
 		text-align: left;
 	}
-	
+
 	#guideList
 	{
 		width: 90%;
 		margin: auto;
 	}
-	
+
 	#guideList li
 	{
 		margin-bottom: 5px;
 	}
-		
+
 	#guideList span
 	{
 		width: 30px;
 		height: 30px;
 	}
-	
+
 	#guideList img
 	{
 		width: 30px;

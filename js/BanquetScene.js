@@ -61,6 +61,28 @@ function toggleInstanceMenu(on) {
   }
 }
 
+// This function toggles the teriary menu on and off depending on the current state, using a fancy slide animation
+function toggleRTIMenu(on) {
+  // Cloned this function from sectiontoolSwitch() of init.js
+  if(on === undefined) on = jQuery('#rti_on').css("visibility")=="visible";
+
+  if(on) {
+    jQuery('#toolbar.RTIMenu').css("opacity", 0);
+    jQuery('#toolbar.RTIMenu').slideDown('slow');
+    jQuery('#toolbar.RTIMenu').animate(
+      { opacity: 1 },
+      { queue: false, duration: 'slow' }
+    );
+  } else {
+    jQuery('#toolbar.RTIMenu').css("opacity", 1);
+    jQuery('#toolbar.RTIMenu').slideUp('slow');
+    jQuery('#toolbar.RTIMenu').animate(
+      { opacity: 0 },
+      { queue: false, duration: 'slow' }
+    );
+  }
+}
+
 // This function switches defined textboxes on or off depending on the current state
 function TextboxSwitch(textbox_id, on) {
   // Cloned this function from sectiontoolSwitch() of init.js
@@ -157,5 +179,37 @@ function toggleRTI(on) {
     jQuery('#TeummanRTIframe').fadeIn().css("display","inline");
   } else {
     jQuery('#TeummanRTIframe').css("display","none");
+  }
+}
+
+function closeAllTasksExcept(task) {
+// If a function is called, like measure or home, all other funtions should close, so there are no overlaps
+// If there is no task defined, it basically resets everything
+  if (task != "lighting") {
+    presenter.enableSceneLighting(true);
+    lightingSwitch();
+    presenter.enableLightTrackball(false);
+    lightSwitch(false);
+  }
+  if (task != "clickinstances") {
+    hideAllHotspotTextboxes();
+    toggleInstanceMenu(false);
+    InstancesSwitch('clickinstances', false);
+  }
+  if (task != "rti") {
+    toggleRTIMenu(false);
+    InstancesSwitch('rti', false);
+    toggleRTI(false);
+  }
+  if (task != "measure") {
+    presenter.enableMeasurementTool(false);
+    measureSwitch(false);
+  }
+  if (task != "color") {
+    colorSwitch(false);
+    togglePaintedModel(false);
+  }
+  if (task != "imprint") {
+    ImprintSwitch(false);
   }
 }
