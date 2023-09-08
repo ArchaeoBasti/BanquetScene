@@ -103,7 +103,6 @@ function ImprintSwitch(on) {
   if(on === undefined) on = jQuery('#imprint').css("visibility")=="visible";
 
   if(on) {
-
   	jQuery('#imprint').css("visibility", "hidden");
   	jQuery('#imprint_on').css("visibility", "visible");
     if (jQuery('#clickinstances_on').css("visibility")=="visible") {
@@ -170,16 +169,25 @@ function toggleAudio(on) {
   }
 }
 
-function toggleRTI(on) {
+function toggleRTI(instance, on) {
   // Cloned this function from hotspotSwitchh() of init.js
-  if(on === undefined) on = jQuery('#TeummanRTIframe').css("display")=="none";
+  if(on === undefined) on = jQuery('#' + instance + 'RTIframe').css("display")=="none";
 
   if(on) {
-    presenter.animateToTrackballPosition([0,2.5,-0.5736600000000008,0.14408273451653547,-0.006290788045828761,0.33]);
-    jQuery('#TeummanRTIframe').fadeIn().css("display","inline");
+    if (instance == "teumman") presenter.animateToTrackballPosition([0,2.5,-0.5736600000000008,0.14408273451653547,-0.006290788045828761,0.33]);
+    if (instance == "banquetscene") presenter.animateToTrackballPosition([0,2.5,0.10760000000000013,-0.004196002530643804,0.0001832014269344112,1.1]);
+    jQuery('#' + instance + 'RTIframe').fadeIn().css("display","inline");
   } else {
-    jQuery('#TeummanRTIframe').css("display","none");
+    //InstancesSwitch('rti_' + instance, false);
+    jQuery('#' + instance + 'RTIframe').css("display","none");
   }
+}
+
+function closeAllRTI() {
+  InstancesSwitch('rti_teumman', false);
+  InstancesSwitch('rti_banquetscene', false);
+  jQuery('#teummanRTIframe').css("display","none");
+  jQuery('#banquetsceneRTIframe').css("display","none");
 }
 
 function closeAllTasksExcept(task) {
