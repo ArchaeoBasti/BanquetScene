@@ -87,11 +87,11 @@ td a:hover {
 }
 
 #toolbar.InstanceMenu {
-  position:absolute; left: 78px; top: 405px;
+  position:absolute; left: 78px; top: 347px;
 }
 
 #toolbar.RTIMenu {
-  position:absolute; left: 78px; top: 463px;
+  position:absolute; left: 78px; top: 405px;
 }
 
 .closeButton {
