@@ -34,6 +34,15 @@ hr {
   color: #1b3951;
 }
 
+#languageSelection {
+  position: absolute; top: 10px; right: 10px;
+}
+
+#languageSelection img {
+  width: 18px; height: 18px;
+  position: relative; top: 5px;
+}
+
 #WebsiteTitle {
   font-size: 30px;
   text-align: center;

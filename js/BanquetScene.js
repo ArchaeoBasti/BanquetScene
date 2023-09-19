@@ -227,7 +227,6 @@ function fetchTextBoxText(id, lang) {
   fetch("texts/" + lang + ".json")
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       var findIDHead = "data." + id + "[0].header"
       document.querySelector("#" + id + "HeadDiv").innerText = eval(findIDHead)
       var findIDText = "data." + id + "[0].text"
