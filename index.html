@@ -25,112 +25,78 @@
   <script type="text/javascript" src="js/init.js"></script>
   <!--PROJECT SPECIFIC-->
   <script type="text/javascript" src="js/BanquetScene.js"></script>
+  <!--In preparation of different languages-->
+  <script>var lang = "en"</script>
 </head>
 <body>
 
+<!-- This tag loads the audio for different browsers and can be started via button -->
  <audio loop id="MySound">
    <source src="sounds/birds-in-the-morning-24147.ogg" type="audio/ogg">
    <source src="sounds/birds-in-the-morning-24147.mp3" type="audio/mpeg">
  </audio>
 
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
-<!--TEXTBOX (needs to come first so wrapper doesn't block buttons)-->
+<!--TEXTBOXES (need to come at this point so wrapper (width: 100%) don't block buttons)-->
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Flora">
         <table>
-          <tr>
-            <td><h2>Neo-Assyrian Flora</h2></td>
-          </tr>
-          <tr>
-            <td>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </td>
-          </tr>
+          <tr><td><div class="text-box-header" id="FloraHeadDiv"></div></td></tr>
+          <tr><td><div class="text-box-text"  id="FloraTextDiv"></div></td></tr>
           <tr height=10><td></td></tr>
-          <tr>
-            <td style="text-align: right;"><i><a href="" target"_new">→ Read more about Neo-Assyrian flora...</i></a></td>
-          </tr>
+          <tr><td><div class="text-box-read"  id="FloraReadDiv"></div></td></tr>
         </table>
       </div>
     </div>
+    <script>fetchTextBoxText("Flora", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Teumman">
         <table>
-          <tr>
-            <td><h2>The head of Teumman</h2></td>
-          </tr>
-          <tr>
-            <td>
-              <p>In the tree to the left, we can identify a head hanging from its branches. This head has been identified belonging to the Elamite king <i>Teumman</i>. He ruled during the 7th century BCE. Teumman's reign was marked by strained relations with the powerful Neo-Assyrian king <i>Ashurbanipal</i>.</p>
-              <p>Tensions between Elam and Assyria escalated when Teumman, according to Ashurbanipal, challenged Assyrian authority. In 653 BCE, Ashurbanipal led a military campaign against Elam in the "Battle of Til-Tuba".</p>
-              <p>Teumman's death marked a turning point in the struggle between Elam and Assyria. His defeat weakened Elam's power and allowed Assyria to maintain its dominance in the region. The Neo-Assyrian king brought Teumman’s head as a war trophy back to his capital.</p>
-            </td>
-          </tr>
+          <tr><td><div class="text-box-header" id="TeummanHeadDiv"></div></td></tr>
+          <tr><td><div class="text-box-text"  id="TeummanTextDiv"></div></td></tr>
           <tr height=10><td></td></tr>
-          <tr>
-            <td style="text-align: right;"><i><a href="" target"_new">→ Read more about Teumman...</a></i></td>
-          </tr>
+          <tr><td><div class="text-box-read"  id="TeummanReadDiv"></div></td></tr>
         </table>
       </div>
     </div>
+    <script>fetchTextBoxText("Teumman", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Fauna">
         <table>
-          <tr>
-            <td><h2>Animals depicted in the Banquet Scene</h2></td>
-          </tr>
-          <tr>
-            <td>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </td>
-          </tr>
+          <tr><td><div class="text-box-header" id="FaunaHeadDiv"></div></td></tr>
+          <tr><td><div class="text-box-text"  id="FaunaTextDiv"></div></td></tr>
           <tr height=10><td></td></tr>
-          <tr>
-            <td style="text-align: right;"><i><a href="" target"_new">→ Read more about animals in Neo-Assyrian times...</i></a></td>
-          </tr>
+          <tr><td><div class="text-box-read"  id="FaunaReadDiv"></div></td></tr>
         </table>
       </div>
     </div>
+    <script>fetchTextBoxText("Fauna", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="King">
         <table>
-          <tr>
-            <td><h2>King Ashurbanipal</h2></td>
-          </tr>
-          <tr>
-            <td>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </td>
-          </tr>
+          <tr><td><div class="text-box-header" id="KingHeadDiv"></div></td></tr>
+          <tr><td><div class="text-box-text"  id="KingTextDiv"></div></td></tr>
           <tr height=10><td></td></tr>
-          <tr>
-            <td style="text-align: right;"><i><a href="" target"_new">→ Read more about Ashurbanipal...</i></a></td>
-          </tr>
+          <tr><td><div class="text-box-read"  id="KingReadDiv"></div></td></tr>
         </table>
       </div>
     </div>
+    <script>fetchTextBoxText("King", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Queen">
         <table>
-          <tr>
-            <td><h2>Queen Liballi-sharrat</h2></td>
-          </tr>
-          <tr>
-            <td>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </td>
-          </tr>
+          <tr><td><div class="text-box-header" id="QueenHeadDiv"></div></td></tr>
+          <tr><td><div class="text-box-text"  id="QueenTextDiv"></div></td></tr>
           <tr height=10><td></td></tr>
-          <tr>
-            <td style="text-align: right;"><i><a href="" target"_new">→ Read more about Liballi-sharrat...</i></a></td>
-          </tr>
+          <tr><td><div class="text-box-read"  id="QueenReadDiv"></div></td></tr>
         </table>
       </div>
     </div>
+    <script>fetchTextBoxText("Queen", lang)</script>
 <!--TEXTBOX-->
 
 <!--IMPRINT-->
@@ -167,12 +133,8 @@
   </div>
 <!--IMPRINT-->
 
- <!--<div id="WebsiteTitle">The Banquet Scene - Interactive 3D Viewer</div>-->
- <div id="WebsiteTitle">
-   <b>THE BANQUET SCENE</b> <font style="color: #396385;">|</font> <font style="color: #1b3951;">Interactive 3D Viewer</font><br>
-   <p style="font-size: 14px; font-style: italic; color: #e2e2e2; margin-top: 5px;">Controls - Left Mouse Button: Rotate, Right Mouse Button: Pan, Mouse Wheel: Zoom</p>
-
- </div>
+ <div id="WebsiteTitle"><script>fetchTitleBar(lang)</script></div>
+ 
  <div id="toolbar">
   <img id="home"        title="Home"                   src="skins/banquetscene/home.png"/><br/>
 <!--DIVIDER-->

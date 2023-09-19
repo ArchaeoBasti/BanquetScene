@@ -26,11 +26,26 @@ hr {
   margin: 4px 0 12px 0;
 }
 
+#Strich {
+  color: #396385;
+}
+
+#SecondaryColor {
+  color: #1b3951;
+}
+
 #WebsiteTitle {
   font-size: 30px;
   text-align: center;
   width: calc(100% - 88px); height: 40px;
   position: absolute; top: 50px; left: 68px;
+}
+
+#instructions {
+  font-size: 14px;
+  font-style: italic;
+  color: #e2e2e2;
+  margin-top: 5px;
 }
 
 .text-box-wrapper {
@@ -50,16 +65,26 @@ hr {
   display: none;
 }
 
+.text-box-header {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.text-box-read {
+  text-align: right;
+  font-style: italic;
+}
+
 @media screen and (max-width: 1000px) {
   .text-box {
     width: 80%;
-
   }
 }
 
-td {
+td, .text-box-text {
   font-size: calc(10px + .4vw);
   line-height: 1.5;
+  font-weight: normal;
 }
 
 td a:link, td a:visited, td a:hover {

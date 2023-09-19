@@ -221,3 +221,28 @@ function closeAllTasksExcept(task) {
     ImprintSwitch(false);
   }
 }
+
+// This function gets an id and language for a textbox, so it accesses the correct JSON file and subtext
+function fetchTextBoxText(id, lang) {
+  fetch("texts/" + lang + ".json")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      var findIDHead = "data." + id + "[0].header"
+      document.querySelector("#" + id + "HeadDiv").innerText = eval(findIDHead)
+      var findIDText = "data." + id + "[0].text"
+      document.querySelector("#" + id + "TextDiv").innerText = eval(findIDText)
+      var findIDRead = "data." + id + "[0].read"
+      var findIDLink = "data." + id + "[0].link" // I have to use this to create a link below, but it doesn't work yet...
+      document.querySelector("#" + id + "ReadDiv").innerHTML = "<a href='" + eval(findIDLink) + "' target='_new'>" + eval(findIDRead) + "</a>"
+    })
+}
+
+// This function creates the title bar depending on the selected language
+function fetchTitleBar(lang) {
+  fetch("texts/" + lang + ".json")
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector("#WebSiteTitle").innerHTML = "<b>" + data.title + "</b> <font id='Strich'>|</font> <font id='SecondaryColor'>" + data.subtitle + "</font><br><p id='Instructions'>" + data.instructions + "</p>"
+    })
+}
