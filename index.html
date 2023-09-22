@@ -26,7 +26,6 @@
   <!--PROJECT SPECIFIC-->
   <script type="text/javascript" src="js/BanquetScene.js"></script>
   <!--In preparation of different languages-->
-  <script>var lang = "en"</script>
 </head>
 <body>
 
@@ -38,68 +37,142 @@
 
 <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
   <div id="languageSelection">
-    <img src="skins/banquetscene/flag-germany_1f1e9-1f1ea.png"> | <img src="skins/banquetscene/flag-united-kingdom_1f1ec-1f1e7.png">
+    <img src="skins/banquetscene/flag-germany_1f1e9-1f1ea.png" onclick="location.href='index.html?lang=de'"> | <img src="skins/banquetscene/flag-united-kingdom_1f1ec-1f1e7.png" onclick="location.href='index.html'">
   </div>
 <!--TEXTBOXES (need to come at this point so wrapper (width: 100%) don't block buttons)-->
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Flora">
         <table>
-          <tr><td><div class="text-box-header" id="FloraHeadDiv"></div></td></tr>
-          <tr><td><div class="text-box-text"  id="FloraTextDiv"></div></td></tr>
+          <tr><td>
+            <span lang="en"><h3>Neo-Assyrian Flora</h3></span>
+            <span lang="de"><h3>Neu-Assyrische Flora</h3></span>
+          </td></tr>
+          <tr><td>
+            <span lang="en">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+            <span lang="de">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+          </td></tr>
+<!--
           <tr height=10><td></td></tr>
-          <tr><td><div class="text-box-read"  id="FloraReadDiv"></div></td></tr>
+          <tr><td style="text-align: right;">
+            <span lang="en"><a href="" target="_new">→ Read more about Neo-Assyrian flora...</a></span>
+            <span lang="de"><a href="" target="_new">→ Mehr über Neu-Assyrische Flora...</a></span>
+          </td></tr>
+-->
         </table>
       </div>
     </div>
-    <script>fetchTextBoxText("Flora", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Teumman">
         <table>
-          <tr><td><div class="text-box-header" id="TeummanHeadDiv"></div></td></tr>
-          <tr><td><div class="text-box-text"  id="TeummanTextDiv"></div></td></tr>
+          <tr><td>
+            <span lang="en"><h3>The head of Teumman</h3></span>
+            <span lang="de"><h3>Der Kopf des Teumman</h3></span>
+          </td></tr>
+          <tr><td>
+            <span lang="en">
+              <p>In the tree to the left, we can identify a head hanging from its branches. This head has been identified belonging to the Elamite king Teumman. He ruled during the 7th century BCE. Teumman's reign was marked by strained relations with the powerful Neo-Assyrian king Ashurbanipal.</p>
+              <p>Tensions between Elam and Assyria escalated when Teumman, according to Ashurbanipal, challenged Assyrian authority. In 653 BCE, Ashurbanipal led a military campaign against Elam in the Battle of Til-Tuba.</p>
+              <p>Teumman's death marked a turning point in the struggle between Elam and Assyria. His defeat weakened Elam's power and allowed Assyria to maintain its dominance in the region. The Neo-Assyrian king brought Teumman’s head as a war trophy back to his capital.</p>
+            </span>
+            <span lang="de">
+              <p>In dem Baum auf der linken Seite können wir einen Kopf erkennen, der von den Ästen herabhängt. Dieser Kopf wurde als der des elamitischen Königs Teumman identifiziert. Er regierte im 7. Jahrhundert vor unserer Zeit. Teummans Regierungszeit war von angespannten Beziehungen zum mächtigen neuassyrischen König Assurbanipal geprägt.</p>
+              <p>Die Spannungen zwischen Elam und Assyrien eskalierten, als Teumman nach Ansicht von Assurbanipal die assyrische Autorität in Frage stellte. Im Jahr 653 v. Chr. führte Assurbanipal einen militärischen Feldzug gegen Elam in der Schlacht von Til-Tuba.</p>
+              <p>Teummans Tod markierte einen Wendepunkt im Kampf zwischen Elam und Assyrien. Seine Niederlage schwächte die Macht Elams und ermöglichte es Assyrien, seine Vorherrschaft in der Region zu behaupten. Der neuassyrische König brachte Teummans Kopf als Kriegstrophäe zurück in seine Hauptstadt.</p>
+            </span>
+          </td></tr>
+<!--
           <tr height=10><td></td></tr>
-          <tr><td><div class="text-box-read"  id="TeummanReadDiv"></div></td></tr>
+          <tr><td style="text-align: right;">
+            <span lang="en"><a href="" target="_new">→ Read more about Teumman...</a></span>
+            <span lang="de"><a href="" target="_new">→ Mehr über Teumman...</a></span>
+          </td></tr>
+-->
         </table>
       </div>
     </div>
-    <script>fetchTextBoxText("Teumman", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Fauna">
         <table>
-          <tr><td><div class="text-box-header" id="FaunaHeadDiv"></div></td></tr>
-          <tr><td><div class="text-box-text"  id="FaunaTextDiv"></div></td></tr>
+          <tr><td>
+            <span lang="en"><h3>Animals depicted in the Banquet Scene</h3></span>
+            <span lang="de"><h3>Das Neu-Assyrische Tierreich</h3></span>
+          </td></tr>
+          <tr><td>
+            <span lang="en">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+            <span lang="de">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+          </td></tr>
+<!--
           <tr height=10><td></td></tr>
-          <tr><td><div class="text-box-read"  id="FaunaReadDiv"></div></td></tr>
+          <tr><td style="text-align: right;">
+            <span lang="en"><a href="" target="_new">→ Read more about animals in Neo-Assyrian times...</a></span>
+            <span lang="de"><a href="" target="_new">→ Mehr über das Neu-Assyrische Tierreich...</a></span>
+          </td></tr>
+-->
         </table>
       </div>
     </div>
-    <script>fetchTextBoxText("Fauna", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="King">
         <table>
-          <tr><td><div class="text-box-header" id="KingHeadDiv"></div></td></tr>
-          <tr><td><div class="text-box-text"  id="KingTextDiv"></div></td></tr>
+          <tr><td>
+            <span lang="en"><h3>King Ashurbanipal</h3></span>
+            <span lang="de"><h3>König Assurbanipal</h3></span>
+          </td></tr>
+          <tr><td>
+            <span lang="en">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+            <span lang="de">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+          </td></tr>
+<!--
           <tr height=10><td></td></tr>
-          <tr><td><div class="text-box-read"  id="KingReadDiv"></div></td></tr>
+          <tr><td style="text-align: right;">
+            <span lang="en"><a href="" target="_new">→ Read more about Ashurbanipal...</a></span>
+            <span lang="de"><a href="" target="_new">→ Mehr über Assurbanipal...</a></span>
+          </td></tr>
+-->
         </table>
       </div>
     </div>
-    <script>fetchTextBoxText("King", lang)</script>
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Queen">
         <table>
-          <tr><td><div class="text-box-header" id="QueenHeadDiv"></div></td></tr>
-          <tr><td><div class="text-box-text"  id="QueenTextDiv"></div></td></tr>
+          <tr><td>
+            <span lang="en"><h3>Queen Liballi-sharrat</h3></span>
+            <span lang="de"><h3>Königin Liballi-sharrat</h3></span>
+          </td></tr>
+          <tr><td>
+            <span lang="en">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+            <span lang="de">
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </span>
+          </td></tr>
+<!--
           <tr height=10><td></td></tr>
-          <tr><td><div class="text-box-read"  id="QueenReadDiv"></div></td></tr>
+          <tr><td style="text-align: right;">
+            <span lang="en"><a href="" target="_new">→ Read more about Liballi-sharrat...</a></span>
+            <span lang="de"><a href="" target="_new">→ Mehr über Liballi-sharrat...</a></span>
+          </td></tr>
+-->
         </table>
       </div>
     </div>
-    <script>fetchTextBoxText("Queen", lang)</script>
 <!--TEXTBOX-->
 
 <!--IMPRINT-->
@@ -107,36 +180,82 @@
     <div class ="text-box boxes" id="imprint_box">
       <table>
         <tr>
-          <td colspan=3><h2>Project Info</h2></td>
+          <td colspan=3>
+            <span lang="en"><h3>Project Info</h3></span>
+            <span lang="de"><h3>Projektinfo</h3></span>
+          </td>
         </tr>
         <tr>
-          <td colspan=3>This project was a collaboration between the Free University of Berlin's Institute of Near Eastern Archaeology and the University of Cologne's Institute of Archaeology (Department of Digital and Computational Archaeology). It was made possible by the Trustees of the British Museum, who kindly allowed us access to the object shown here. The scans of the object were completed in February 2023, and this website was composed in the same year.</td>
+          <td colspan=3>
+            <span lang="en">This project is a collaboration between the Free University of Berlin's Institute of Near Eastern Archaeology and the University of Cologne's Institute of Archaeology (Department of Digital and Computational Archaeology). The scans of the object were completed in February 2023, and this website was composed in the same year.</span>
+            <span lang="de">Dieses Projekt ist eine Zusammenarbeit zwischen dem Institut für Vorderasiatische Archäologie der Freien Universität Berlin und dem Institut für Archäologie der Universität zu Köln (Abteilung Archäoinformatik). Die Scans des Objekts wurden im Februar 2023 abgeschlossen, und diese Website wurde im selben Jahr erstellt.</span>
+          </td>
         </tr>
         <tr>
-          <td style="padding-top: 20px;"><b>Project Idea:</b></td>
-          <td colspan =2 style="padding-top: 20px;"><a href="https://www.geschkult.fu-berlin.de/e/vaa/vaa/mitarbeiter/Professorinnen_und_Professoren/bonatz.html" target="_new">Prof. Dr. Dominik Bonatz</a> (Free University Berlin)</td>
+          <td style="padding-top: 20px;">
+            <span lang="en"><b>Project Idea:</b></span>
+            <span lang="de"><b>Projekt Idee:</b></span>
+          </td>
+          <td colspan =2 style="padding-top: 20px;">
+            <span lang="en"><a href="https://www.geschkult.fu-berlin.de/en/e/vaa/vaa/mitarbeiter/Professorinnen_und_Professoren/bonatz.html" target="_new">Prof. Dr. Dominik Bonatz</a> (Free University Berlin)</span>
+            <span lang="de"><a href="https://www.geschkult.fu-berlin.de/e/vaa/vaa/mitarbeiter/Professorinnen_und_Professoren/bonatz.html" target="_new">Prof. Dr. Dominik Bonatz</a> (Freie Universität Berlin)</span>
+          </td>
         </tr>
         <tr>
-          <td><b>Digital Realization:</b></td>
-          <td colspan=2><a href="https://archaeologie.phil-fak.uni-koeln.de/personen/wissenschaftliche-mitarbeiter/assistenten-innen/dr-sebastian-hageneuer" target="_new">Dr. Sebastian Hageneuer</a> (University of Cologne)</td>
+          <td>
+            <span lang="en"><b>Digital Realization:</b></span>
+            <span lang="de"><b>Digitale Umsetzung:</b></span>
+          </td>
+          <td colspan=2>
+            <span lang="en"><a href="https://archaeologie.phil-fak.uni-koeln.de/en/staff/academic-staff/research-associates/dr-sebastian-hageneuer" target="_new">Dr. Sebastian Hageneuer</a> (University of Cologne)</span>
+            <span lang="de"><a href="https://archaeologie.phil-fak.uni-koeln.de/personen/wissenschaftliche-mitarbeiter/assistenten-innen/dr-sebastian-hageneuer" target="_new">Dr. Sebastian Hageneuer</a> (Universität zu Köln)</span>
+          </td>
         </tr>
         <tr>
-          <td style="padding-top: 20px;" colspan=3><b>Thanks:</b><br>We are grateful to the British Museum's Trustees for providing us access to the object, as well as Dr. Sébastien Rey and Dr. Nancy Highcock for planning our visit and making it all possible.<br></td>
+          <td style="padding-top: 20px;" colspan=3>
+            <span lang="en"><b>Thanks:</b><br>We are grateful to the British Museum's Trustees for providing us access to the object, as well as Dr. Sébastien Rey and Dr. Nancy Highcock for planning our visit and making it all possible.</span>
+            <span lang="de"><b>Danksagung:</b><br>Wir danken den Trustees des British Museums, die uns den Zugang zu dem Objekt gewährt haben, sowie Dr. Sébastien Rey und Dr. Nancy Highcock, die unseren Besuch geplant und ermöglicht haben.</span>
+          </td>
         </tr>
         <tr>
-          <td colspan=3 style="padding-top: 20px;">This project is published on <a href="https://github.com/sebastian81/BanquetScene" target="_new">GitHub</a> under the GNU General Public License v3.0</td>
+          <td colspan=3 style="padding-top: 20px;">
+            <span lang="en">
+              This project is published on <a href="https://github.com/sebastian81/BanquetScene" target="_new">GitHub</a> under the GNU General Public License v3.0.<br>
+              The data collected for this project is published on Zenodo under the DOI <i>[will follow]</i>.
+            </span>
+            <span lang="de">
+              Dieses Projekt ist auf <a href="https://github.com/sebastian81/BanquetScene" target="_new">GitHub</a> unter der GNU General Public License v3.0 publiziert.<br>
+              Die für dieses Projekt gesammelten Daten sind auf Zenodo unter der DOI <i>[wird folgen]</i> abrufbar.
+            </span>
+          </td>
         </tr>
         <tr>
           <td style="padding-top: 20px;"><a href="https://www.fu-berlin.de/" target="_new"><img src="images/Logo_FUBerlin.png" height=60></a></td>
           <td style="padding-top: 20px;"><a href="https://www.uni-koeln.de/" target="_new"><img src="images/Logo_UzK.png" height=70></a></td>
           <td style="padding-top: 20px;"><a href="https://www.britishmuseum.org/" target="_new"><img src="images/Logo_BM.png" height=60></a></td>
         </tr>
+        <tr>
+          <td colspan=3 style="text-align: right; font-size: small; font-style: italic; padding-top: 20px;">
+            <span lang="en">Version 1.0, published 22. September 2023</span>
+            <span lang="de">Version 1.0, veröffentlicht am 22. September 2023</span>
+          </td>
+        </tr>
       </table>
     </div>
   </div>
 <!--IMPRINT-->
 
- <div id="WebsiteTitle"><script>fetchTitleBar(lang)</script></div>
+<!-- <div id="WebsiteTitle"><script>fetchTitleBar(lang)</script></div>-->
+<div id="WebsiteTitle">
+  <span lang="en"><b>THE BANQUET SCENE</b></span>
+  <span lang="de"><b>DIE BANKETT SZENE</b></span>
+  <font id='Strich'> | </font>
+  <span lang="en"><font id='SecondaryColor'>Interactive 3D Viewer</font></span>
+  <span lang="de"><font id='SecondaryColor'>Interaktiver 3D Viewer</font></span>
+  <br>
+  <span lang="en"><p id='Instructions'>Controls - Left Mouse Button: Rotate, Right Mouse Button: Pan, Mouse Wheel: Zoom</p></span>
+  <span lang="de"><p id='Instructions'>Kontrollen - Linke Maustaste: Drehen, Rechte Maustaste: Verschieben, Mausrad: Zoom</p></span>
+</div>
 
  <div id="toolbar">
   <img id="home"        title="Home"                   src="skins/banquetscene/home.png"/><br/>
@@ -359,6 +478,15 @@ $(document).ready(function(){
 
 	setup3dhop();
 });
+
+// LANGUAGE PREPARATOR
+const url = new URL(window.location.href);
+var lang = url.searchParams.get('lang');
+if (lang == null) lang = "en";
+elements = document.querySelectorAll(`span[lang=${lang}]`);
+for (let element of elements) {
+  element.style.display = 'inline';
+}
 </script>
 <!--LOGGING POSITION-->
 <!--

@@ -16,6 +16,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+span[lang=en], span[lang=de] {
+  display: none
+}
+
 body {
   font-family: Arial, sans-serif;
   color: #FFF;
@@ -74,23 +78,13 @@ hr {
   display: none;
 }
 
-.text-box-header {
-  font-size: x-large;
-  font-weight: bold;
-}
-
-.text-box-read {
-  text-align: right;
-  font-style: italic;
-}
-
 @media screen and (max-width: 1000px) {
   .text-box {
     width: 80%;
   }
 }
 
-td, .text-box-text {
+td {
   font-size: calc(10px + .4vw);
   line-height: 1.5;
   font-weight: normal;
