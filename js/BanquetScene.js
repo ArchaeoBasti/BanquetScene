@@ -132,7 +132,7 @@ function InstancesSwitch(instance, on) {
     switch(instance) {
        case 'king' : presenter.animateToTrackballPosition([2.58, 2.05, 0.31, 0.1, -0.06, 0.52]); break;
        case 'queen' : presenter.animateToTrackballPosition([14.72, 4.69, 0.13, 0, 0, 0.52]); break;
-       case 'teumman' : presenter.animateToTrackballPosition([3.5,10,-0.6,0.1,0.17,0.3]); break;
+       case 'teumman' : presenter.animateToTrackballPosition([0,2.5,-0.5736600000000008,0.14408273451653547,-0.006290788045828761,0.33]); break;
        case 'fauna' : presenter.animateToTrackballPosition([1.43, 7.1, -0.4, 0.2, 0, 0.5]); break;
        case 'flora' : presenter.animateToTrackballPosition([-15.18, -7.12, -0.27, 0, 0, 0.88]); break;
     }
@@ -177,8 +177,10 @@ function toggleRTI(instance, on) {
     if (instance == "teumman") presenter.animateToTrackballPosition([0,2.5,-0.5736600000000008,0.14408273451653547,-0.006290788045828761,0.33]);
     if (instance == "banquetscene") presenter.animateToTrackballPosition([0,2.5,0.10760000000000013,-0.004196002530643804,0.0001832014269344112,1.1]);
     jQuery('#' + instance + 'RTIframe').fadeIn().css("display","inline");
+    //--DRAGGABLE RTI IFRAME--
+      dragElement(document.getElementById("teummanRTIframe"));
+    //--DRAGGABLE RTI IFRAME--
   } else {
-    //InstancesSwitch('rti_' + instance, false);
     jQuery('#' + instance + 'RTIframe').css("display","none");
   }
 }
@@ -207,7 +209,7 @@ function closeAllTasksExcept(task) {
   if (task != "rti") {
     toggleRTIMenu(false);
     InstancesSwitch('rti', false);
-    toggleRTI(false);
+    toggleRTI('teumman', false);
   }
   if (task != "measure") {
     presenter.enableMeasurementTool(false);
@@ -222,26 +224,43 @@ function closeAllTasksExcept(task) {
   }
 }
 
-// This function gets an id and language for a textbox, so it accesses the correct JSON file and subtext
-function fetchTextBoxText(id, lang) {
-  fetch("texts/" + lang + ".json")
-    .then(response => response.json())
-    .then(data => {
-      var findIDHead = "data." + id + "[0].header"
-      document.querySelector("#" + id + "HeadDiv").innerText = eval(findIDHead)
-      var findIDText = "data." + id + "[0].text"
-      document.querySelector("#" + id + "TextDiv").innerText = eval(findIDText)
-      var findIDRead = "data." + id + "[0].read"
-      var findIDLink = "data." + id + "[0].link" // I have to use this to create a link below, but it doesn't work yet...
-      document.querySelector("#" + id + "ReadDiv").innerHTML = "<a href='" + eval(findIDLink) + "' target='_new'>" + eval(findIDRead) + "</a>"
-    })
-}
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
 
-// This function creates the title bar depending on the selected language
-function fetchTitleBar(lang) {
-  fetch("texts/" + lang + ".json")
-    .then(response => response.json())
-    .then(data => {
-      document.querySelector("#WebSiteTitle").innerHTML = "<b>" + data.title + "</b> <font id='Strich'>|</font> <font id='SecondaryColor'>" + data.subtitle + "</font><br><p id='Instructions'>" + data.instructions + "</p>"
-    })
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }

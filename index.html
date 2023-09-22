@@ -68,6 +68,7 @@
 
     <div class="text-box-wrapper">
       <div class="text-box boxes" id="Teumman">
+        <div style="position:relative; top: -30px; left: 10px; background-color: GREEN; display: inline; padding: 5px;" onClick="toggleRTI('teumman');">SHOW RTI</div>
         <table>
           <tr><td>
             <span lang="en"><h3>The head of Teumman</h3></span>
@@ -253,8 +254,8 @@
   <span lang="en"><font id='SecondaryColor'>Interactive 3D Viewer</font></span>
   <span lang="de"><font id='SecondaryColor'>Interaktiver 3D Viewer</font></span>
   <br>
-  <span lang="en"><p id='Instructions'>Controls - Left Mouse Button: Rotate, Right Mouse Button: Pan, Mouse Wheel: Zoom</p></span>
-  <span lang="de"><p id='Instructions'>Kontrollen - Linke Maustaste: Drehen, Rechte Maustaste: Verschieben, Mausrad: Zoom</p></span>
+  <span lang="en"><p id='Instructions'>Controls: Left Mouse Button: Rotate, Right Mouse Button: Pan, Mouse Wheel: Zoom</p></span>
+  <span lang="de"><p id='Instructions'>Steuerung: Linke Maustaste: Drehen, Rechte Maustaste: Verschieben, Mausrad: Zoom</p></span>
 </div>
 
  <div id="toolbar">
@@ -337,12 +338,7 @@
      <img id="flora"         title="Flora"                        src="skins/banquetscene/flora.png"/><br/>
    <!--FLORA-->
  </div>
-
  <div id="toolbar" class="RTIMenu" style="display: none;">
-   <!--COMPLETE SCENE-->
-     <img id="rti_banquetscene_on"      title="Turn RTI off"                src="skins/banquetscene/banquetscene_on.png" style="position:absolute; visibility:hidden;"/>
-     <img id="rti_banquetscene"         title="RTI of the complete scene"   src="skins/banquetscene/banquetscene.png"/><br/>
-   <!--COMPLETE SCENE-->
    <!--KING TEUMMAN-->
      <img id="rti_teumman_on"      title="Turn RTI off"                src="skins/banquetscene/teumman_on.png" style="position:absolute; visibility:hidden;"/>
      <img id="rti_teumman"         title="RTI of King Teumman"         src="skins/banquetscene/teumman.png"/><br/>
@@ -433,9 +429,6 @@ function actionsToolbar(action) {
 //--RTI--
 	else if(action=='rti' || action=='rti_on') { InstancesSwitch('clickinstances', false); hideAllHotspotTextboxes(); toggleInstanceMenu(false); closeAllRTI(); InstancesSwitch('rti'); toggleRTIMenu(); }
 //--RTI--
-//--CLICKABLE RTI COMPLETE SCENE--
-	else if(action=='rti_banquetscene' || action=='rti_banquetscene_on') { InstancesSwitch('rti_banquetscene'); toggleRTI("banquetscene"); }
-//--CLICKABLE RTI COMPLETE SCENE--
 //--CLICKABLE RTI KING TEUMMAN--
 	else if(action=='rti_teumman' || action=='rti_teumman_on') { InstancesSwitch('rti_teumman'); toggleRTI("teumman"); }
 //--CLICKABLE RTI KING TEUMMAN--
@@ -497,16 +490,12 @@ for (let element of elements) {
 -->
 <!--LOGGING POSITION-->
 <!--RTI-->
-  <div id="teummanRTIframe" class="boxes" style="position: absolute; top:120px; left:136px; width: 450px; height: 660px; display: none;">
-    <div style="width: 100%; text-align: center; float:left; font-size: 30px;">RTI-Viewer</div>
+  <div id="teummanRTIframe" class="boxes" style="padding: 10px; position: absolute; top:120px; left:136px; width: 410px; display: none; cursor: move;">
+    <div style="width: 100%; text-align: center; float:left; font-size: 30px;">
+      <b>RTI</b><p id='Instructions'>Frame: LMB: Move Window | RTI: LMB: Pan, MW: Zoom, Lightbulb + LMB: Change Light</p>
+    </div>
     <iframe src="rti/viewer.html" title="IFrame" width=410 height=600 style="width: 100%; float: left; border: 0;"></iframe>
     <a href="javascript:toggleRTI('teumman', false)"><div class="closeButton"></div></a>
-  </div>
-
-  <div id="banquetsceneRTIframe" class="boxes" style="position: absolute; top:120px; left:136px; width: 2040px; height: 878px; display: none;">
-    <div style="width: 100%; text-align: center; float:left; font-size: 30px;">RTI-Viewer</div>
-    <iframe src="rti/viewer_complete.html" title="IFrame" width=2000 height=818 style="width: 100%; float: left; border: 0;"></iframe>
-    <a href="javascript:toggleRTI('banquetscene', false)"><div class="closeButton"></div></a>
   </div>
 <!--RTI-->
 </html>
